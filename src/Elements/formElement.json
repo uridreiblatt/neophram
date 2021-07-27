@@ -1,0 +1,59 @@
+[
+    {
+        "page_label":"Page label",
+        "fields" :[
+            {
+                "field_id":"english_name",
+                "field_label":"Name",
+                "field_mandatory":"yes",
+                "field_placeholder":"Enter name",
+                "field_type":"text",
+                "field_value":""
+
+            },
+            {
+                "field_id":"email",
+                "field_label":"Email",
+                "field_mandatory":"yes",
+                "field_placeholder":"Enter name",
+                "field_type":"text",
+                "field_value":""
+
+            },
+            {
+                "field_id":"address",
+                "field_label":"Address",
+                "field_mandatory":"yes",
+                "field_placeholder":"Enter address",
+                "field_type":"text",
+                "field_value":""
+
+            },
+            {
+                "field_id":"employment",
+                "field_label":"Employment",
+                "field_mandatory":"yes",
+                "field_placeholder":"Enter name",
+                "field_type":"select",
+                "field_value":"Part-time",
+                "field_options":
+                [
+                    {"option_label":  "Part-time"},
+                    {"option_label":  "Full-time"}
+                ]
+            },
+            {
+                "field_id":"driving_license",
+                "field_label":"Confirm drivinglicense",
+                "field_mandatory":"yes",
+                "field_placeholder":"Enter name",
+                "field_type":"checkbox",
+                "field_value":"checked"
+
+            }
+
+
+
+        ]
+    }
+]
