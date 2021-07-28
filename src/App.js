@@ -2,14 +2,34 @@ import formJSON from './Elements/formElement.json';
 import { FormContext } from './FormContext';
 import { useState, useEffect } from 'react';
 import Element from './components/Element';
+import ConfirmForm from './components/ConfirmForm'
 console.log('formJSON',formJSON)
 function App() {
   const [elements, setElements] = useState(null);
+  const [stageFormStep, setstageFormStep] = useState(0);
+  const nextStep = (e) => {
+    var newstageFormStep = stageFormStep 
+    e.preventDefault();
+    newstageFormStep=newstageFormStep+1
+    console.log(elements.pages.length)
+    if (newstageFormStep >=elements.pages.length ) return;
 
+    setstageFormStep(newstageFormStep);
+  };
+  const prevStep = (e) => { 
+    var newstageFormStep = stageFormStep 
+    e.preventDefault();
+    newstageFormStep=newstageFormStep-1
+    console.log(newstageFormStep)    
+    if (newstageFormStep<0) return;
+    setstageFormStep(newstageFormStep);
+  };
   const handleSubmit = ()=>{
     console.log('submit')
-    alert(elements)
+    var value_elemnet = elements.fields.map((field,i)=> field.field_value)
+    alert( JSON.stringify(value_elemnet))
     }
+
     const handleChange = (id, event) => {
       const newElements = { ...elements }
       newElements.fields.forEach(field => {
@@ -27,37 +47,39 @@ function App() {
       setElements(newElements)
       });
       }
+
   useEffect(()=>{
   setElements(formJSON[0])
   },[])
 
-  const { fields, page_label } = elements ?? {}
+
+
+ 
+  const { fields, page_label, pages } = elements ?? {}
   return (
-    <FormContext.Provider value={{handleChange}}>
+    
+    <FormContext.Provider value={{handleChange,handleSubmit}}>
     <div className="container">
       <form>
-        <h3>{page_label}</h3>
+        <h3>{page_label} {stageFormStep}</h3>
+
         {fields ? fields.map((field, i) => <div key={i}><Element field={field} /><p></p></div>) : null}
 
-        {/* <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Email address</label>
-          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-          <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div className="form-group">
-          <label htmlFor="exampleInputPassword1">Password</label>
-          <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
-        </div>
-        <div className="form-check">
-          <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-          <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
-        </div>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>*/}
+
+        {
+            pages ? pages.map((page,i)=> 
+                        (stageFormStep === i ? 
+                                              page.fields ? 
+                                                            page.fields.map((field, i) => <div key={i}><Element field={field} /><p></p></div>) 
+                                                          : null
+                                           : null))
+                  :null
+        }
+          
+
+        
+        <button  className="btn btn-primary" onClick={nextStep}>Continue</button>
+        <button  className="btn btn-primary" onClick={prevStep}>Go Back</button>
         <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Submit</button> 
       </form>
     </div>

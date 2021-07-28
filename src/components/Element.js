@@ -2,6 +2,7 @@ import React from 'react';
 import Input from './Input';
 import Select from './Select';
 import Checkbox from './Checkbox';
+import ConfirmForm from './ConfirmForm';
 const Element = ({ field: { field_type, field_id, field_label, field_placeholder, field_value ,field_options} }) => {
     switch (field_type) {
         case 'text' :
@@ -38,6 +39,11 @@ const Element = ({ field: { field_type, field_id, field_label, field_placeholder
                 field_type={field_type}
                 field_value={field_value}
             />)
+            case 'confirm':
+                return (<ConfirmForm
+                    field_id={field_id}
+                    field_label={field_label}                   
+                />)
         default:
             return null;
     }
