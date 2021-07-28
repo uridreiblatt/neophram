@@ -8,6 +8,7 @@ function App() {
 
   const handleSubmit = ()=>{
     console.log('submit')
+    alert(elements)
     }
     const handleChange = (id, event) => {
       const newElements = { ...elements }

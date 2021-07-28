@@ -16,7 +16,7 @@
                 "field_label":"Email",
                 "field_mandatory":"yes",
                 "field_placeholder":"Enter name",
-                "field_type":"text",
+                "field_type":"email",
                 "field_value":""
 
             },
