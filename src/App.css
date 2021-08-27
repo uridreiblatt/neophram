@@ -1,0 +1,50 @@
+.btn{
+    margin: .2em;
+}
+
+.container{
+    margin-top: 20px;
+    
+    max-width: 70%;
+    background-color: darkslategrey;
+}
+/* #root{
+    background-color: black;
+    height: 100%;
+}
+
+.home{
+    top: 80px;
+    color: white;
+    background-color: chartreuse;
+    height: 95%;
+    align-items: center;
+    text-align: center;
+} */
+
+.icon-bar{
+    height: 80px;
+    background-color:darkslategray;
+}
+/* .App{
+    height: 800px;
+} */
+
+.span-green{
+    margin-left: 0.2em;
+    color: greenyellow;
+    
+    }
+
+    
+.App-logo {
+    height: 10vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  

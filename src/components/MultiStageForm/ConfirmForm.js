@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { FormContext } from '../FormContext';
+import { FormContext } from './FormContext';
 const ConfirmForm = ({ field_id, field_label, field_options }) => {
     const { handleSubmit } = useContext(FormContext);
     return (

@@ -1,32 +1,52 @@
 [
     {
-        "page_label": "Page label",
+        "app_label": "Page label",
         "pages": [
             {
                 "fields": [
+                    {
+                        "field_id": "Barcode",
+                        "field_label": "Barcode",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "Enter name",
+                        "field_type": "text",
+                        "field_value": "",
+                        "field_disable":true
+                    },
+                    {
+                        "field_id": "Barcode1",
+                        "field_label": "Barcode1",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "Enter name",
+                        "field_type": "text",
+                        "field_value": "",
+                        "field_disable":true
+                    },
+                    {
+                        "field_id": "Barcode2",
+                        "field_label": "Barcode2 kjfdsjfda;lskjfldskj df;ljksadlfjkdsa fda;skjfs;da f;ladskjf adskjf ldsak;j fa;ldskjf la;dskjf                        Barcode2 kjfdsjfda;lskjfldskj df;ljksadlfjkdsa fda;skjfs;da f;ladskjf adskjf ldsak;j fa;ldskjf la;dskjf                    Barcode2 kjfdsjfda;lskjfldskj df;ljksadlfjkdsa fda;skjfs;da f;ladskjf adskjf ldsak;j fa;ldskjf la;dskjf                                                Barcode2 kjfdsjfda;lskjfldskj df;ljksadlfjkdsa fda;skjfs;da f;ladskjf adskjf ldsak;j fa;ldskjf la;dskjf",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "Enter name",
+                        "field_type": "text",
+                        "field_value": "",
+                        "field_disable":false
+                    },
+                    {
+                        "field_id": "QuantityMl",
+                        "field_label": "QuantityMl",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "Enter name",
+                        "field_type": "text",
+                        "field_value": ""
+                    },
                     {
                         "field_id": "english_name",
                         "field_label": "Name",
                         "field_mandatory": "yes",
                         "field_placeholder": "Enter name",
                         "field_type": "text",
-                        "field_value": ""
-                    },
-                    {
-                        "field_id": "email",
-                        "field_label": "Email",
-                        "field_mandatory": "yes",
-                        "field_placeholder": "Enter name",
-                        "field_type": "email",
-                        "field_value": ""
-                    },
-                    {
-                        "field_id": "address",
-                        "field_label": "Address",
-                        "field_mandatory": "yes",
-                        "field_placeholder": "Enter address",
-                        "field_type": "text",
-                        "field_value": ""
+                        "field_value": "",
+                        "field_disable":false
                     }
                 ]
             },
@@ -46,15 +66,17 @@
                             {
                                 "option_label": "Full-time"
                             }
-                        ]
+                        ],
+                        "field_disable":false
                     },
                     {
                         "field_id": "driving_license",
-                        "field_label": "Confirm drivinglicense",
+                        "field_label": "Confirm driving license",
                         "field_mandatory": "yes",
                         "field_placeholder": "Enter name",
                         "field_type": "checkbox",
-                        "field_value": "checked"
+                        "field_value": "checked",
+                        "field_disable":false
                     }
                 ]
             },
@@ -67,59 +89,10 @@
                         "field_mandatory": "yes",
                         "field_placeholder": "Enter name",
                         "field_type": "confirm",
-                        "field_value": "checked"
+                        "field_value": "checked",
+                        "field_disable":false
                     }
                 ]
-            }
-        ],
-        "fields": [
-            {
-                "field_id": "english_name",
-                "field_label": "Name",
-                "field_mandatory": "yes",
-                "field_placeholder": "Enter name",
-                "field_type": "text",
-                "field_value": ""
-            },
-            {
-                "field_id": "email",
-                "field_label": "Email",
-                "field_mandatory": "yes",
-                "field_placeholder": "Enter name",
-                "field_type": "email",
-                "field_value": ""
-            },
-            {
-                "field_id": "address",
-                "field_label": "Address",
-                "field_mandatory": "yes",
-                "field_placeholder": "Enter address",
-                "field_type": "text",
-                "field_value": ""
-            },
-            {
-                "field_id": "employment",
-                "field_label": "Employment",
-                "field_mandatory": "yes",
-                "field_placeholder": "Enter name",
-                "field_type": "select",
-                "field_value": "Part-time",
-                "field_options": [
-                    {
-                        "option_label": "Part-time"
-                    },
-                    {
-                        "option_label": "Full-time"
-                    }
-                ]
-            },
-            {
-                "field_id": "driving_license",
-                "field_label": "Confirm drivinglicense",
-                "field_mandatory": "yes",
-                "field_placeholder": "Enter name",
-                "field_type": "checkbox",
-                "field_value": "checked"
             }
         ]
     }

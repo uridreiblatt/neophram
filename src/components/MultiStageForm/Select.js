@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { FormContext } from '../FormContext';
+import { FormContext } from './FormContext';
 const Select = ({ field_id, field_label, field_options }) => {
     const { handleChange } = useContext(FormContext);
     return (

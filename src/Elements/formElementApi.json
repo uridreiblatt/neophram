@@ -1,0 +1,278 @@
+{
+    "errorMessage": "Success",
+    "errorInnerException": null,
+    "errorCode": 0,
+    "rootobjectReactForm": {
+      "app_label": "Perp Form",
+      "app_url": "Add pdf link",
+      "pages": [
+        {
+          "page_label": "Perp Page label 1",
+          "fields": [
+            {
+              "field_id": "odatacontext",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": null,
+              "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "PREPTASKNUM",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "PRP2100001",
+              "field_disable": true,
+              "field_options": []
+            },
+            {
+              "field_id": "SERIALNAME",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "T-161148",
+              "field_disable": true,
+              "field_options": []
+            },
+            {
+              "field_id": "PARTNAME",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "Z-0070-2",
+              "field_disable": true,
+              "field_options": []
+            },
+            {
+              "field_id": "PSDATE",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "21/07/21",
+              "field_disable": true,
+              "field_options": []
+            },
+            {
+              "field_id": "CODE",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "select",
+              "field_value": "TPN",
+              "field_disable": true,
+              "field_options": [
+                {
+                  "option_label": "B-0001"
+                },
+                {
+                  "option_label": "Z-0008"
+                },
+                {
+                  "option_label": "Z-0009"
+                }
+              ]
+            },
+            {
+              "field_id": "MONITORING",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "checkbox",
+              "field_value": null,
+              "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "NORMALLABEL",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": null,
+              "field_disable": false,
+              "field_options": []
+            }
+          ]
+        },
+        {
+          "page_label": "Perp Page label 2",
+          "fields": [
+            {
+              "field_id": "STABILITY",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": null,
+              "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "FLOWRATE",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": null,
+              "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "WORKSTATIONNAME",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": null,
+              "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "WORKSTATIONDES",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": null,
+              "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "WEIGHINGCONTROL",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "0",
+              "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "UNITS",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "0",
+              "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "SIGN",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": null,
+              "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "USERID2",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "1014",
+              "field_disable": false,
+              "field_options": []
+            }
+          ]
+        },
+        {
+          "page_label": "Perp Page label 3",
+          "fields": [
+            {
+              "field_id": "SNAME2",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "יוסי חופי",
+              "field_disable": true,
+              "field_options": []
+            },
+            {
+              "field_id": "STATDES",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "לביצוע",
+              "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "USERID",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "0",
+              "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "SNAME",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": null,
+              "field_disable": true,
+              "field_options": []
+            },
+            {
+              "field_id": "INITIAL",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "Y",
+              "field_disable": true,
+              "field_options": []
+            },
+            {
+              "field_id": "RECEPTACLECODE",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "10",
+              "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "RECEPTACLEDES",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "ניפרו 50 4.2",
+              "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "PREPTASK",
+              "field_label": "PREPTASKNUM",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "2",
+              "field_disable": false,
+              "field_options": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+
+

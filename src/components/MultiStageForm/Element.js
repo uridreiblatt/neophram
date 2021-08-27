@@ -3,7 +3,7 @@ import Input from './Input';
 import Select from './Select';
 import Checkbox from './Checkbox';
 import ConfirmForm from './ConfirmForm';
-const Element = ({ field: { field_type, field_id, field_label, field_placeholder, field_value ,field_options} }) => {
+const Element = ({ field: { field_type, field_id, field_label, field_placeholder, field_value ,field_options,field_disable} }) => {
     switch (field_type) {
         case 'text' :
             return (
@@ -13,6 +13,7 @@ const Element = ({ field: { field_type, field_id, field_label, field_placeholder
                     field_placeholder={field_placeholder}
                     field_value={field_value}
                     field_type={field_type}
+                    field_disable={field_disable}
                 />);
         case 'email' :
             return (
@@ -22,6 +23,7 @@ const Element = ({ field: { field_type, field_id, field_label, field_placeholder
                     field_placeholder={field_placeholder}
                     field_value={field_value}
                     field_type={field_type}
+                    field_disable={field_disable}
                 />);
         case 'select':
             return (

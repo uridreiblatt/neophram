@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { FormContext } from '../FormContext';
+import { FormContext } from './FormContext';
 const Checkbox = ({ field_id,
     field_label,
     field_value }) => {
