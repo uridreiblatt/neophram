@@ -13,18 +13,43 @@ import './App.css';
 
 function App() {
   const [islogedIn, setislogedIn] = useState(false);
+  const [username, setUserName] = useState('urid');
+  
+  //component={() => <Dashboard isAuthed={true} />}
+  function fsetislogedin(e)
+  {
+    if (e!=null)
+    {
+      setUserName ( e[0].pharmacistName);
+      setislogedIn  (true);
+    }
+    else{
+      setislogedIn  (false);
+    }
+  }
+
+  // if (!islogedIn) {
+  //   return (
+  //   <>
+  //     <TopMenu islogedIn={islogedIn} userName = {username} />
+  //   <Login fsetislogedin={fsetislogedin} />
+  //   </>)
+  // }
   return (
 
  <div className="App">
       <Router>
-        <TopMenu islogedIn={islogedIn} />
+        <TopMenu islogedIn={islogedIn} userName = {username} />
+        {islogedIn ? 
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/Login' exact component={Login} />
-          <Route path='/MultiStageForm' component={MultiStageForm} />                                
-          {/* <Route path='/customer/details/:id'  exact  component={UserDetails} />  
-          <Route path='/customer/customerinfo/:id'  component={TabCustomres } />  */}
-        </Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/Login' exact component={Login} />
+        <Route path='/MultiStageForm' component={MultiStageForm} />                                
+        {/* <Route path='/customer/details/:id'  exact  component={UserDetails} />  
+        <Route path='/customer/customerinfo/:id'  component={TabCustomres } />  */}
+      </Switch>
+        : <Login fsetislogedin={fsetislogedin} />}
+        
       </Router>
     </div>
 

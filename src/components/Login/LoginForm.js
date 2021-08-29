@@ -1,7 +1,8 @@
 import React  , {useState}from 'react'
 import './LoginForm.css'
 import axios from 'axios'
-import logo from '../../logo.svg';
+import formJSONpharmacist from '../../Elements/pharmacist.json';
+
 
 
 //const apiUrl = 'http://localhost:3001';
@@ -38,12 +39,12 @@ async function loginUser(credentials) {
   })
     .then(data => data.json())
  }
-
-
+ console.log('formJSONpharmacist',formJSONpharmacist)
 const LoginForm = (props) => {
     //const {handleChanges,values,handleSubmit, errors, NetError} = useForm(validate);
     //const storedJwt = localStorage.getItem('token');
     const [username, setUserName] = useState('urid');
+    const [UserEmail, setUserEmail] = useState('urid@gmail.com');
     const [password, setPassword] = useState('pwd');
     const [error, setError] = useState();
     // const [jwt, setjwt] = useState();
@@ -53,7 +54,12 @@ const LoginForm = (props) => {
     const handleSubmit = async e => {
       e.preventDefault();
       console.log('ggg')
-      props.fsetislogedin();
+      var pharmacist=  formJSONpharmacist.filter(item => item.pharmacistName === username  )
+      if (pharmacist != null){
+        props.fsetislogedin(pharmacist);
+    }
+    
+
       // const token = await loginUser({
       //   username,
       //   password
@@ -111,12 +117,18 @@ const LoginForm = (props) => {
         //      </form>
         // </div>
 
-        <form className="login-form">
+        <form className="login-form" onSubmit={handleSubmit}>
             <h3>Sign In</h3>
 
+
+
+            <div className="form-group" >
+            <label>User name</label>
+            <input type="text" className="form-control" placeholder="User name" onChange={e=> setUserName(e.target.value)} value={username} />
+        </div>
         <div className="form-group" onSubmit={handleSubmit}>
             <label>Email address</label>
-            <input type="email" className="form-control" placeholder="Enter email" onChange={e=> setUserName(e.target.value)} />
+            <input type="email" className="form-control" placeholder="Enter email" onChange={e=> setUserEmail(e.target.value)} value={UserEmail} />
         </div>
 
         <div className="form-group">
@@ -124,12 +136,12 @@ const LoginForm = (props) => {
             <input type="password" className="form-control" placeholder="Enter password" onChange={e => setPassword(e.target.value)} />
         </div>
 
-        <div className="form-group">
+        {/* <div className="form-group">
             <div className="custom-control custom-checkbox">
                 <input type="checkbox" className="custom-control-input" id="customCheck1" />
                 <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
             </div>
-        </div>
+        </div> */}
 
         <button type="submit" className="btn btn-primary btn-block">Submit</button>
         <p className="forgot-password text-right">

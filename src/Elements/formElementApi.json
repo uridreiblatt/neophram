@@ -28,7 +28,38 @@
               "field_value": "PRP2100001",
               "field_disable": true,
               "field_options": []
+            },  
+            {
+              "field_id": "MONITORING",
+              "field_label": "MONITORING",
+              "field_mandatory": "yes",
+              "field_placeholder": "PREPTASKNUM",
+              "field_type": "checkbox",
+              "field_value": null,
+              "field_disable": false,
+              "field_options": []
             },
+            {
+              "field_id": "CODE",
+              "field_label": "CODE",
+              "field_mandatory": "yes",
+              "field_placeholder": "CODE",
+              "field_type": "select",
+              "field_value": "TPN",
+              "field_disable": true,
+              "field_options": [
+                {
+                  "option_label": "B-0001"
+                },
+                {
+                  "option_label": "Z-0008"
+                },
+                {
+                  "option_label": "Z-0009"
+                }
+              ]
+            },
+            
             {
               "field_id": "SERIALNAME",
               "field_label": "PREPTASKNUM",
@@ -51,49 +82,21 @@
             },
             {
               "field_id": "PSDATE",
-              "field_label": "PREPTASKNUM",
+              "field_label": "PSDATE",
               "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
+              "field_placeholder": "PSDATE",
               "field_type": "text",
               "field_value": "21/07/21",
               "field_disable": true,
               "field_options": []
             },
-            {
-              "field_id": "CODE",
-              "field_label": "PREPTASKNUM",
-              "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "select",
-              "field_value": "TPN",
-              "field_disable": true,
-              "field_options": [
-                {
-                  "option_label": "B-0001"
-                },
-                {
-                  "option_label": "Z-0008"
-                },
-                {
-                  "option_label": "Z-0009"
-                }
-              ]
-            },
-            {
-              "field_id": "MONITORING",
-              "field_label": "PREPTASKNUM",
-              "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "checkbox",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": []
-            },
+            
+           
             {
               "field_id": "NORMALLABEL",
-              "field_label": "PREPTASKNUM",
+              "field_label": "NORMALLABEL",
               "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
+              "field_placeholder": "NORMALLABEL",
               "field_type": "text",
               "field_value": null,
               "field_disable": false,

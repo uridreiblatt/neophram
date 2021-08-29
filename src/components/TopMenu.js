@@ -1,6 +1,9 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { AiTwotoneHome, FaRegSun } from "react-icons/ai";
+
+
 
 const TopMenu = (props) => {
     const islogedIn = props.islogedIn;
@@ -10,35 +13,24 @@ const TopMenu = (props) => {
 
         <div className="icon-bar">
 
+           
+            <div className="div-home">
 
+           
             <Link className="active" to={'/'} >
-                <i className="fa fa-home"></i>
+            <AiTwotoneHome className="ico" />
+           
             </Link>
-            {/* <Link to={'/vehicles'} >
-                    <i className="fa fa-car"></i>
-                </Link>
-
-
-
-                <Link
-                    to={'/customer/all'} >
-                    <i className="fa fa-user"></i>
-                </Link>
-                <Link
-                    className={islogedIn ? 'active' : 'notlogedin'}
-                    to={'/Login'} >
-                    <i className="fa fa-key"></i>
-                </Link> */}
-
-            {/* <input type="text" placeholder="Search.." /> */}
-
-
+            </div>
             <div className="div-logo">
           
               
                         Elogy <span className="span-green"> Avi innovation</span>
                 
                      
+            </div>
+            <div className="user-name">
+                <h3>{props.userName}</h3>
             </div>
 
         </div>

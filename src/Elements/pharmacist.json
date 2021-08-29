@@ -1,0 +1,27 @@
+[
+    {
+        "pharmacistName": "urid",
+        "pharmacistPwd":"pwd"
+    }
+    ,
+    {
+        "pharmacistName": "pharmacistName2",
+        "pharmacistPwd":"pwd"
+    }
+    ,
+    {
+        "pharmacistName": "pharmacistName3",
+        "pharmacistPwd":"pwd"
+    }
+    ,
+    {
+        "pharmacistName": "pharmacistName4",
+        "pharmacistPwd":"pwd"
+    }
+    ,
+    {
+        "pharmacistName": "pharmacistName5",
+        "pharmacistPwd":"pwd"
+    }
+    
+]

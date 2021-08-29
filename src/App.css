@@ -3,24 +3,25 @@
 }
 
 .container{
-    margin-top: 20px;
-    
-    max-width: 70%;
-    background-color: darkslategrey;
-}
-/* #root{
-    background-color: black;
-    height: 100%;
+  margin-top:  10px !important;
+  font-weight: 300 !important;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  max-width: 700px;
+  margin: 25%;
+  padding: .5em;
+  align-items:center;
+  border-radius: 1em;
+  margin-top: 1em;
+
+ 
+  color:darkslategrey;
+  background-color: gray;
 }
 
-.home{
-    top: 80px;
-    color: white;
-    background-color: chartreuse;
-    height: 95%;
-    align-items: center;
-    text-align: center;
-} */
 
 .icon-bar{
     height: 80px;
@@ -47,4 +48,74 @@
       animation: App-logo-spin infinite 20s linear;
     }
   }
+  .user-name
+  {
+    color: white;
+    margin-right: 20px;
+    background-color:gray;
+    padding: 5px;
+    top: 20px;
+    height: 40px;
+    border-radius: 1em;
+  }
+
+  .icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: hidden; /* Overflow due to float */
+    background-color:  #060b26;
+    height :70px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    place-content: space-between;
+  }
+  .active{
+    color: black;
+  }
+  .active a:hover {
+    color: green; /* Add a hover color */
+  }
   
+ 
+  .ico{
+    color: gray;
+    width:60px ;
+    height:60px;
+  }
+
+
+  .ico a:hover {
+    color: green; /* Add a hover color */
+  }
+  
+
+  .div-logo {
+    float: right;
+    padding: 6px;
+    margin-top: 30px;
+    margin-right: 16px;
+    height: 80px;
+    font-size: 20px !important;
+    color: aliceblue;
+    align-items: center;
+  }
+  .div-home {
+    float: right;
+    padding: 6px;
+    height: 70px;
+    width: 70px;
+   
+    color: aliceblue;
+    align-items: center;
+  }
+  
+
+  .form-group{
+    font-size :smaller !important;
+  }
+  .form-check-label
+  {
+    font-size :smaller !important;
+    color: black;
+  }

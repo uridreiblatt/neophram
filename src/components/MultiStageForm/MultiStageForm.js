@@ -1,12 +1,15 @@
 import React  from 'react'
+import { Link } from 'react-router-dom';
 import { FormContext } from './FormContext';
 import { useState, useEffect } from 'react';
 import formJSON from '../../Elements/formElementApi.json';
 import Element from './Element';
 import ConfirmForm from './ConfirmForm'
+import { AiFillFilePdf } from "react-icons/ai";
+
 import {Pdf} from '../../Pdf/Doc.pdf';
 console.log('formJSON',formJSON)
-const MultiStageForm = () => {
+const MultiStageForm = ({barCode}) => {
         const [elements, setElements] = useState(null);
         const [stageFormStep, setstageFormStep] = useState(0);
         const nextStep = (e) => {
@@ -68,13 +71,14 @@ const MultiStageForm = () => {
         <FormContext.Provider value={{handleChange,handleSubmit}}>
     <div className="container">
       <form>
-        <h3>{app_label } {stageFormStep}</h3>
+        <h3>{barCode}</h3>
+        <h3>{app_label } {stageFormStep} Presscription pdf: <Link className="active" to={'/pdf'} >
+            <AiFillFilePdf className="ico" />
+           
+            </Link></h3>
         
-        <a href="https://www.google.com/" target="_blank" rel="noreferrer">google</a>
-        <br></br>
-        <a href="file://Pdf/doc.pdf" target="_blank" rel="noreferrer">Read more</a>
-        <br></br>
-        <a href={require('../../Pdf/Doc.pdf')} target="_blank" rel="noreferrer">Download Pdf</a>
+       
+       
      
 
 
@@ -93,8 +97,9 @@ const MultiStageForm = () => {
           
 
         
+       
+        <button  className="btn btn-success" onClick={prevStep}>Go Back</button>
         <button  className="btn btn-success" onClick={nextStep}>Continue</button>
-        <button  className="btn btn-info" onClick={prevStep}>Go Back</button>
         <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Submit</button> 
       </form>
     </div>
