@@ -114,6 +114,9 @@
   .form-group{
     font-size :smaller !important;
   }
+  .form-control{
+    font-size :smaller !important;
+  }
   .form-check-label
   {
     font-size :smaller !important;

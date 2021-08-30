@@ -52,8 +52,7 @@ const LoginForm = (props) => {
     
     
     const handleSubmit = async e => {
-      e.preventDefault();
-      console.log('ggg')
+      e.preventDefault();    
       var pharmacist=  formJSONpharmacist.filter(item => item.pharmacistName === username  )
       if (pharmacist != null){
         props.fsetislogedin(pharmacist);

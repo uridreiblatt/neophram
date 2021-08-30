@@ -1,7 +1,7 @@
 
 import React  from 'react'
 import { useState } from 'react';
-import { Switch , Route } from 'react-router-dom';
+import { Switch , Route ,useHistory } from 'react-router-dom';
 import MultiStageForm from './components/MultiStageForm/MultiStageForm';
 import Login from './components/Login/LoginForm'
 import TopMenu from './components/TopMenu';
@@ -12,6 +12,7 @@ import './App.css';
 
 
 function App() {
+  const history = useHistory();
   const [islogedIn, setislogedIn] = useState(false);
   const [username, setUserName] = useState('urid');
   
@@ -26,6 +27,9 @@ function App() {
     else{
       setislogedIn  (false);
     }
+    try{history.push("");}
+    catch{}
+    
   }
 
   // if (!islogedIn) {
@@ -44,7 +48,8 @@ function App() {
         <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/Login' exact component={Login} />
-        <Route path='/MultiStageForm' component={MultiStageForm} />                                
+        <Route path='/MultiStageForm/:barcode' exact component={MultiStageForm} />      
+        <Route path='/MultiStageForm/:barcode' exact component={MultiStageForm} />                              
         {/* <Route path='/customer/details/:id'  exact  component={UserDetails} />  
         <Route path='/customer/customerinfo/:id'  component={TabCustomres } />  */}
       </Switch>

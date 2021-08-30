@@ -7,7 +7,7 @@ const QrScnaner = () => {
     height: 240,
     width: 320
   };
-  const [scanData, setscanData] = useState();
+  const [scanData, setscanData] = useState('R02020202');
   const [scanIfnodelay, setscanIfnodelay] = useState(1000);
   const [scanIfnoresult, setscanIfnoresult] = useState('No result');
   const [scanIfnokeepScan, setscanIfnokeepScan] = useState(true);
@@ -56,7 +56,7 @@ const QrScnaner = () => {
         {!scanIfno.keepScan ?  <button type="submit" className="btn btn-primary btn-block" onClick={GotoForm} >Submit</button>:null } 
        </div> */}
 
-      <Link to="/MultiStageForm" params={{ barcode: "bbarcode" }} className="btn btn-primary">Goto Form</Link>
+      <Link to={`/MultiStageForm/${scanData}`}  className="btn btn-primary">Goto Form</Link>
       </div>
       
     )

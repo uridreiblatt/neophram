@@ -1,15 +1,21 @@
 import React  from 'react'
-import { Link } from 'react-router-dom';
+import { Link ,useHistory,useParams} from 'react-router-dom';
 import { FormContext } from './FormContext';
 import { useState, useEffect } from 'react';
 import formJSON from '../../Elements/formElementApi.json';
 import Element from './Element';
 import ConfirmForm from './ConfirmForm'
 import { AiFillFilePdf } from "react-icons/ai";
+import Pdf from '../../Pdf/Doc.pdf'
 
-import {Pdf} from '../../Pdf/Doc.pdf';
+//import {Pdf} from 'Doc.pdf'; ,
 console.log('formJSON',formJSON)
-const MultiStageForm = ({barCode}) => {
+const MultiStageForm = () => {
+  
+        let { barcode } = useParams();
+        console.log(barcode);
+        const history = useHistory();
+        const [showSubmit,setshowSubmit] = useState(false);
         const [elements, setElements] = useState(null);
         const [stageFormStep, setstageFormStep] = useState(0);
         const nextStep = (e) => {
@@ -17,11 +23,16 @@ const MultiStageForm = ({barCode}) => {
           e.preventDefault();
           newstageFormStep=newstageFormStep+1
           console.log(elements.rootobjectReactForm.pages.length)
-          if (newstageFormStep >=elements.rootobjectReactForm.pages.length ) return;
+          if (newstageFormStep >=elements.rootobjectReactForm.pages.length )
+          {  
+             setshowSubmit(true);
+             return;
+          }
       
           setstageFormStep(newstageFormStep);
         };
         const prevStep = (e) => { 
+          setshowSubmit(false);
           var newstageFormStep = stageFormStep 
           e.preventDefault();
           newstageFormStep=newstageFormStep-1
@@ -33,7 +44,8 @@ const MultiStageForm = ({barCode}) => {
           console.log('submit')
           //var value_elemnet = elements.fields.map((field,i)=> field.field_value)
           //alert( JSON.stringify(value_elemnet))
-          alert( JSON.stringify(elements.rootobjectReactForm.app_label))
+          alert( JSON.stringify(elements.rootobjectReactForm))                             
+          history.push("/");
       
           }
       
@@ -61,6 +73,9 @@ const MultiStageForm = ({barCode}) => {
         setElements(formJSON)
         
         },[])
+        const openPdf = ()=> {
+          window.open(Pdf);
+        }
       
       
       
@@ -71,11 +86,15 @@ const MultiStageForm = ({barCode}) => {
         <FormContext.Provider value={{handleChange,handleSubmit}}>
     <div className="container">
       <form>
-        <h3>{barCode}</h3>
-        <h3>{app_label } {stageFormStep} Presscription pdf: <Link className="active" to={'/pdf'} >
-            <AiFillFilePdf className="ico" />
+        <h3> Barcode: {barcode}</h3>
+        <h3>{app_label } stage {stageFormStep} Presscription pdf: <a onClick={openPdf}>
+      <AiFillFilePdf className="ico" style={{backgroundColor:"black" , height:"40px", width:"40px"}} />
+   </a>
+            
            
-            </Link></h3>
+          
+            </h3>
+          
         
        
        
@@ -91,7 +110,7 @@ const MultiStageForm = ({barCode}) => {
                                               page.fields ? 
                                                             page.fields.map((field, i) => <div key={i}><Element field={field} /><p></p></div>) 
                                                           : null
-                                           : null))
+                        : null))
                   :null
         }
           
@@ -100,7 +119,7 @@ const MultiStageForm = ({barCode}) => {
        
         <button  className="btn btn-success" onClick={prevStep}>Go Back</button>
         <button  className="btn btn-success" onClick={nextStep}>Continue</button>
-        <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Submit</button> 
+        {showSubmit ? <button  className="btn btn-primary" onClick={handleSubmit}>Submit</button> :null}
       </form>
     </div>
     </FormContext.Provider>
