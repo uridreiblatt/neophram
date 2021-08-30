@@ -86,25 +86,13 @@ const MultiStageForm = () => {
         <FormContext.Provider value={{handleChange,handleSubmit}}>
     <div className="container">
       <form>
-        <h3> Barcode: {barcode}</h3>
+        <h3 style={{color:"blue"}}> Barcode: {barcode}</h3>
         <h3>{app_label } stage {stageFormStep} Presscription pdf: <a onClick={openPdf}>
       <AiFillFilePdf className="ico" style={{backgroundColor:"black" , height:"40px", width:"40px"}} />
-   </a>
-            
-           
-          
+   </a>          
             </h3>
           
-        
-       
-       
-     
-
-
-       {/* {fields ? fields.map((field, i) => <div key={i}><Element field={field} /><p></p></div>) : null} */}
-
-
-        {
+               {
             pages ? pages.map((page,i)=> 
                         (stageFormStep === i ? 
                                               page.fields ? 

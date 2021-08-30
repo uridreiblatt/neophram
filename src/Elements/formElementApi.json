@@ -9,16 +9,7 @@
         {
           "page_label": "Perp Page label 1",
           "fields": [
-            {
-              "field_id": "odatacontext",
-              "field_label": "PREPTASKNUM",
-              "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "text",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": []
-            },
+           
             {
               "field_id": "PREPTASKNUM",
               "field_label": "PREPTASKNUM",
@@ -61,18 +52,18 @@
             },
             
             {
-              "field_id": "SERIALNAME",
-              "field_label": "PREPTASKNUM",
+              "field_id": "Multiselect",
+              "field_label": "Multiselect",
               "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "text",
+              "field_placeholder": "Multiselect",
+              "field_type": "Multiselect",
               "field_value": "T-161148",
               "field_disable": true,
               "field_options": []
             },
             {
               "field_id": "PARTNAME",
-              "field_label": "PREPTASKNUM",
+              "field_label": "PARTNAME",
               "field_mandatory": "yes",
               "field_placeholder": "PREPTASKNUM",
               "field_type": "text",
