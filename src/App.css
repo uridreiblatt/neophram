@@ -128,3 +128,9 @@
     width: 100%;
     background-color: cadetblue;
   }
+  .instructions{
+  direction:"rtl" ;
+  font-size: xx-small;
+ background-color: white;
+ color: black;
+}

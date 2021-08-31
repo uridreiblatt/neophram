@@ -57,6 +57,14 @@ const Element = ({ field: { field_type, field_id, field_label, field_placeholder
                     field_id={field_id}
                     field_label={field_label}                   
                 />)
+                case 'instructions':
+                    return (<Instructions
+                        field_id={field_id}
+                        field_label={field_label}
+                        field_type={field_type}
+                        field_value={field_value}
+                    />)
+                
         default:
             return null;
     }
