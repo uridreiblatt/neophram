@@ -7,6 +7,8 @@ import Element from './Element';
 import ConfirmForm from './ConfirmForm'
 import { AiFillFilePdf } from "react-icons/ai";
 import Pdf from '../../Pdf/Doc.pdf'
+import DataTable from '../MultiStageForm/DataTable'
+import Instructions from './Instructions';
 
 //import {Pdf} from 'Doc.pdf'; ,
 console.log('formJSON',formJSON)
@@ -91,7 +93,9 @@ const MultiStageForm = () => {
       <AiFillFilePdf className="ico" style={{backgroundColor:"black" , height:"40px", width:"40px"}} />
    </a>          
             </h3>
-          
+            <DataTable></DataTable>
+            <Instructions></Instructions>
+
                {
             pages ? pages.map((page,i)=> 
                         (stageFormStep === i ? 

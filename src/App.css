@@ -122,3 +122,9 @@
     font-size :smaller !important;
     color: black;
   }
+
+  table, th, td , tr{
+    border: 2px solid black;
+    width: 100%;
+    background-color: cadetblue;
+  }
