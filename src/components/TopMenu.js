@@ -25,7 +25,7 @@ const TopMenu = (props) => {
             <div className="div-logo">
           
               
-                        Elogy <span className="span-green"> Avi innovation</span>
+                        Elogy <span className="span-green"> Priority innovation</span>
                 
                      
             </div>

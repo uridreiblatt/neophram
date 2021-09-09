@@ -16,6 +16,7 @@
   align-items:center;
   border-radius: 1em;
   margin-top: 1em;
+  width: 700px;
 
  
   color:darkslategrey;
@@ -113,6 +114,7 @@
 
   .form-group{
     font-size :smaller !important;
+    text-align: center;
   }
   .form-control{
     font-size :smaller !important;
@@ -124,13 +126,20 @@
   }
 
   table, th, td , tr{
+    direction: rtl;
     border: 2px solid black;
     width: 100%;
     background-color: cadetblue;
+    text-align: center;
   }
   .instructions{
-  direction:"rtl" ;
-  font-size: xx-small;
+  direction: rtl ;
+  font-size: small;
+  text-align: right;
  background-color: white;
- color: black;
+ color: blue;
+ width: 100%;
+ height : fit-content;
+ min-height: 120px  !important;
+
 }

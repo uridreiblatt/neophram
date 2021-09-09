@@ -12,7 +12,7 @@
            
             {
               "field_id": "PREPTASKNUM",
-              "field_label": "PREPTASKNUM",
+              "field_label": "מספר תעודת הכנה",
               "field_mandatory": "yes",
               "field_placeholder": "PREPTASKNUM",
               "field_type": "text",
@@ -21,18 +21,87 @@
               "field_options": []
             },  
             {
-              "field_id": "MONITORING",
-              "field_label": "MONITORING",
+              "field_id": "SERIALNAME",
+              "field_label": "פק\"ע",
+              "field_mandatory": "yes",
+              "field_placeholder": "SERIALNAME",
+              "field_type": "text",
+              "field_value": null,
+              "field_disable": true ,
+              "field_options": []
+            },
+            {
+              "field_id": "PARTNAME",
+              "field_label": "מק\"ט",
               "field_mandatory": "yes",
               "field_placeholder": "PREPTASKNUM",
+              "field_type": "text",
+              "field_value": "Z-0070-2",
+              "field_disable": true,
+              "field_options": []
+            },
+            {
+              "field_id": "PSDATE",
+              "field_label": "תאריך הכנה",
+              "field_mandatory": "yes",
+              "field_placeholder": "PSDATE",
+              "field_type": "text",
+              "field_value": "21/07/21",
+              "field_disable": true,
+              "field_options": []
+            },
+            {
+              "field_id": "CODE",
+              "field_label": "סוג בית מרקחת",
+              "field_mandatory": "yes",
+              "field_placeholder": "CODE",
+              "field_type": "text",
+              "field_value": "בית מרקחת",
+              "field_disable": true,
+              "field_options": []
+            },
+            {
+              "field_id": "MONITORING",
+              "field_label": "בדיקת צלחת ניטור",
+              "field_mandatory": "yes",
+              "field_placeholder": "MONITORING",
+              "field_type": "checkbox",
+              "field_value": "21/07/21",
+              "field_disable": false,
+              "field_options": []
+            },            
+                                             
+            {
+              "field_id": "NORMALLABEL",
+              "field_label": "פרטי מדבקה תקינים",
+              "field_mandatory": "yes",
+              "field_placeholder": "NORMALLABEL",
               "field_type": "checkbox",
               "field_value": null,
               "field_disable": false,
               "field_options": []
             },
+            
+           
+            
             {
-              "field_id": "CODE",
-              "field_label": "CODE",
+              "field_id": "Multiselect",
+              "field_label": "Multiselect",
+              "field_mandatory": "yes",
+              "field_placeholder": "Multiselect",
+              "field_type": "Multiselect",
+              "field_value": "T-161148",
+              "field_disable": true,
+              "field_options": []
+            }
+          ]
+        },
+        {
+          "page_label": "Perp Page label 2",
+          "fields": [
+            {
+              "field_id": "WORKSTATIONDES",
+              "field_label": "תיאור מנדף",
               "field_mandatory": "yes",
               "field_placeholder": "CODE",
               "field_type": "select",
@@ -50,99 +119,32 @@
                 }
               ]
             },
-            
-            {
-              "field_id": "Multiselect",
-              "field_label": "Multiselect",
-              "field_mandatory": "yes",
-              "field_placeholder": "Multiselect",
-              "field_type": "Multiselect",
-              "field_value": "T-161148",
-              "field_disable": true,
-              "field_options": []
-            },
-            {
-              "field_id": "PARTNAME",
-              "field_label": "PARTNAME",
-              "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "text",
-              "field_value": "Z-0070-2",
-              "field_disable": true,
-              "field_options": []
-            },
-            {
-              "field_id": "PSDATE",
-              "field_label": "PSDATE",
-              "field_mandatory": "yes",
-              "field_placeholder": "PSDATE",
-              "field_type": "text",
-              "field_value": "21/07/21",
-              "field_disable": true,
-              "field_options": []
-            },
-            
-           
-            {
-              "field_id": "NORMALLABEL",
-              "field_label": "NORMALLABEL",
-              "field_mandatory": "yes",
-              "field_placeholder": "NORMALLABEL",
-              "field_type": "text",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": []
-            }
-          ]
-        },
-        {
-          "page_label": "Perp Page label 2",
-          "fields": [
             {
               "field_id": "STABILITY",
-              "field_label": "PREPTASKNUM",
+              "field_label": "יציבות תקינה",
               "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "text",
+              "field_placeholder": "STABILITY",
+              "field_type": "checkbox",
               "field_value": null,
               "field_disable": false,
               "field_options": []
             },
             {
               "field_id": "FLOWRATE",
-              "field_label": "PREPTASKNUM",
+              "field_label": "קצב זרימה",
               "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "text",
+              "field_placeholder": "FLOWRATE",
+              "field_type": "checkbox",
               "field_value": null,
               "field_disable": false,
               "field_options": []
             },
-            {
-              "field_id": "WORKSTATIONNAME",
-              "field_label": "PREPTASKNUM",
-              "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "text",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": []
-            },
-            {
-              "field_id": "WORKSTATIONDES",
-              "field_label": "PREPTASKNUM",
-              "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "text",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": []
-            },
+           
             {
               "field_id": "WEIGHINGCONTROL",
-              "field_label": "PREPTASKNUM",
+              "field_label": "בקרת שקילה",
               "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
+              "field_placeholder": "WEIGHINGCONTROL",
               "field_type": "text",
               "field_value": "0",
               "field_disable": false,
@@ -150,9 +152,9 @@
             },
             {
               "field_id": "UNITS",
-              "field_label": "PREPTASKNUM",
+              "field_label": "מספר יחידות תקינות",
               "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
+              "field_placeholder": "UNITS",
               "field_type": "text",
               "field_value": "0",
               "field_disable": false,
@@ -160,22 +162,32 @@
             },
             {
               "field_id": "SIGN",
-              "field_label": "PREPTASKNUM",
+              "field_label": "חתימת טכנאי",
               "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "text",
+              "field_placeholder": "SIGN",
+              "field_type": "checkbox",
               "field_value": null,
               "field_disable": false,
               "field_options": []
             },
             {
               "field_id": "USERID2",
-              "field_label": "PREPTASKNUM",
+              "field_label": "מספר טכנאי",
               "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
+              "field_placeholder": "USERID2",
               "field_type": "text",
               "field_value": "1014",
               "field_disable": false,
+              "field_options": []
+            },
+            {
+              "field_id": "SNAME2",
+              "field_label": "שם טכנאי",
+              "field_mandatory": "yes",
+              "field_placeholder": "SNAME2",
+              "field_type": "text",
+              "field_value": "יוסי חופי",
+              "field_disable": true,
               "field_options": []
             }
           ]
@@ -183,19 +195,20 @@
         {
           "page_label": "Perp Page label 3",
           "fields": [
+            
             {
-              "field_id": "SNAME2",
-              "field_label": "PREPTASKNUM",
+              "field_id": "Instructions",
+              "field_label": "הנחיות",
               "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "text",
-              "field_value": "יוסי חופי",
+              "field_placeholder": "instructions",
+              "field_type": "instructions",
+              "field_value": " שקית: בוצע ערבוב של השקית על פי הנדרש בנוהל HC-PP-036. בוצעה בדיקה ויזואלית לתוכן השקית שנמצא תקין לשימוש מבחינת צבע,משקעים, אוויר והומוגניות .            ·          אינפיוזר: בוצע Prime לאינפיוזר. בוצעה בדיקה ויזואלית לתוכן האינפיוזרשנמצא תקין לשימוש מבחינת צבע, משקעים, אוויר והומוגניות. בוצע מאזן כמות תרופה. ·          מזרק: בוצעה בדיקה ויזואלית לתוכן המזרק שנמצא תקין לשימוש מבחינת צבע,משקעים, אוויר והומוגניות.  בוצע מאזן כמות תרופה.",
               "field_disable": true,
               "field_options": []
             },
             {
               "field_id": "STATDES",
-              "field_label": "PREPTASKNUM",
+              "field_label": "סטאטוס",
               "field_mandatory": "yes",
               "field_placeholder": "PREPTASKNUM",
               "field_type": "text",
@@ -205,7 +218,7 @@
             },
             {
               "field_id": "USERID",
-              "field_label": "PREPTASKNUM",
+              "field_label": "מספר עובד רוקח",
               "field_mandatory": "yes",
               "field_placeholder": "PREPTASKNUM",
               "field_type": "text",
@@ -215,7 +228,7 @@
             },
             {
               "field_id": "SNAME",
-              "field_label": "PREPTASKNUM",
+              "field_label": "שם רוקח",
               "field_mandatory": "yes",
               "field_placeholder": "PREPTASKNUM",
               "field_type": "text",
@@ -228,40 +241,33 @@
               "field_label": "PREPTASKNUM",
               "field_mandatory": "yes",
               "field_placeholder": "PREPTASKNUM",
-              "field_type": "text",
+              "field_type": "checkbox",
               "field_value": "Y",
               "field_disable": true,
               "field_options": []
+            },            
+            {
+              "field_id": "multi select",
+              "field_label": "תיאור מנדף",
+              "field_mandatory": "yes",
+              "field_placeholder": "CODE",
+              "field_type": "select",
+              "field_value": "TPN",
+              "field_disable": true,
+              "field_options": [
+                {
+                  "option_label": "B-0001"
+                },
+                {
+                  "option_label": "Z-0008"
+                },
+                {
+                  "option_label": "Z-0009"
+                }
+              ]
             },
             {
-              "field_id": "RECEPTACLECODE",
-              "field_label": "PREPTASKNUM",
-              "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "text",
-              "field_value": "10",
-              "field_disable": false,
-              "field_options": []
-            },
-            {
-              "field_id": "RECEPTACLEDES",
-              "field_label": "PREPTASKNUM",
-              "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "text",
-              "field_value": "ניפרו 50 4.2",
-              "field_disable": false,
-              "field_options": []
-            },
-            {
-              "field_id": "PREPTASK",
-              "field_label": "PREPTASKNUM",
-              "field_mandatory": "yes",
-              "field_placeholder": "PREPTASKNUM",
-              "field_type": "text",
-              "field_value": "2",
-              "field_disable": false,
-              "field_options": []
+
             }
           ]
         }

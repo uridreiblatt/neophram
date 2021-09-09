@@ -61,12 +61,13 @@ const MultiSelect = ({ field_id, field_label, field_placeholder, field_value,fie
 
         <div className="form-group">
             <label htmlFor={field_id}>{field_label}  </label>
-            <Select options={prepEquipment} isMulti={true} onChange={HandleChange} placeholder={field_placeholder}></Select>
-            <center style={{color:"blue"}}>
+            <Select className="form-control" options={prepEquipment} isMulti={true} onChange={HandleChange} placeholder={field_placeholder}></Select>
+            {/* <center style={{color:"blue"}}>
+                
                 <b>Selected Parts</b>
-                <h3 style={{color:"blue"}}>{selectedValue +", "} </h3>
+                <h3 style={{color:"blue"}}>{selectedValue ? selectedValue +", " : null} </h3>
 
-            </center>
+            </center> */}
         </div>
        
 
