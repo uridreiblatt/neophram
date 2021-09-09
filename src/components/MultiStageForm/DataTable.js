@@ -32,7 +32,7 @@ export default function DataTable() {
             const tableData =  [         
          
                 {
-                   value:[{text_display:"fff"},{text_display:"fff"},{text_display:"fff"},{text_display:"fff"}]
+                   value:[{text_display:"ddd"},{text_display:"fff"},{text_display:"ggg"},{text_display:"hhh"}]
                 },
                 {
                     value:[{text_display:"fff"},{text_display:"fff"},{text_display:"fff"},{text_display:"fff"}]
@@ -45,7 +45,7 @@ export default function DataTable() {
               ]        
     return (
         <div>
- <table >
+ <table className="form-control" >
       <thead>
       {
             <tr>

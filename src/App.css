@@ -129,8 +129,11 @@
     direction: rtl;
     border: 2px solid black;
     width: 100%;
-    background-color: cadetblue;
+    background-color:rosybrown;
     text-align: center;
+  }
+  td{
+    width: 30%;
   }
   .instructions{
   direction: rtl ;

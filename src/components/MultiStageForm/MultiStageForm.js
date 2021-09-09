@@ -93,7 +93,8 @@ const MultiStageForm = () => {
       <AiFillFilePdf className="ico" style={{backgroundColor:"black" , height:"40px", width:"40px"}} />
    </a>          
             </h3>
-            {/* <DataTable></DataTable> */}
+            <DataTable></DataTable>
+            <br></br>
             {/* <Instructions></Instructions> */}
 
                {
