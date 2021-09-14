@@ -2,17 +2,55 @@ import React  from 'react'
 import { Link ,useHistory,useParams} from 'react-router-dom';
 import { FormContext } from './FormContext';
 import { useState, useEffect } from 'react';
-import formJSON from '../../Elements/formElementApi.json';
+import formJSON from '../../Elements/data.json';
 import Element from './Element';
 import ConfirmForm from './ConfirmForm'
 import { AiFillFilePdf } from "react-icons/ai";
 import Pdf from '../../Pdf/Doc.pdf'
 import DataTable from '../MultiStageForm/DataTable'
 import Instructions from './Instructions';
+import axios from 'axios'
+
+
+
+const api = axios.create({
+  //baseURL: 'http://localhost/WebApiPg/api'
+  //baseURL: 'http://localhost:61518/api'
+  baseURL: 'https://ngpapi.neopharmgroup.com/odata/Priority/tabula.ini/eld0999/'
+ })
+ 
 
 //import {Pdf} from 'Doc.pdf'; ,
 console.log('formJSON',formJSON)
 const MultiStageForm = () => {
+
+      //   var Submit_data = {
+      //     "MONITORING": 'Y',
+      //     "NORMALLABEL": 'Y',
+      //     "STABILITY": 'Y',
+      //     "FLOWRATE": 'Y',
+      //     "WORKSTATIONNAME": "a1",
+      //     "WORKSTATIONDES": "test1",
+      //     "WEIGHINGCONTROL": 0.0000,
+      //     "UNITS": 0,
+      //     "SIGN": 'Y',
+      //     "USERID2": 2597,
+      //     "SNAME2": 'יובל בר-לב TEST',
+      //     "USERID": 2583,
+      //     "SNAME": 'אור גלבוע',
+      //     "INITIAL": "Y",
+      //     "NEO_PREPADDEQUIP_SUBFORM": [
+      //         {
+      //             "PARTNAME": "Z-0008"
+      //         },
+      //         {
+      //             "PARTNAME": "Z-0009"
+      //         },
+      //         {
+      //             "PARTNAME": "Z-0027"
+      //         }
+      //     ]
+      // }
   
         let { barcode } = useParams();
         console.log(barcode);
@@ -42,14 +80,56 @@ const MultiStageForm = () => {
           if (newstageFormStep<0) return;
           setstageFormStep(newstageFormStep);
         };
-        const handleSubmit = ()=>{
-          console.log('submit')
-          //var value_elemnet = elements.fields.map((field,i)=> field.field_value)
-          //alert( JSON.stringify(value_elemnet))
-          alert( JSON.stringify(elements.rootobjectReactForm))                             
-          history.push("/");
-      
-          }
+
+
+
+        const handleSubmit = () =>
+        {                                    
+          console.clear();
+          console.log(JSON.stringify(elements));                                
+          var username = 'D002F8E1CEFA4567AB6032DF9EAA4D0D';
+          var password = 'PAT';
+          var credentials = btoa(username + ':' + password);
+          var basicAuth = 'Basic ' + credentials;
+         
+          
+           
+             
+            api.patch("NEO_PREPTASK('PRP2100002')?$expand=NEO_PRESCRIPTION_LBL_SUBFORM",elements,
+            {method: "PATCH",
+              headers: {
+                 'Authorization':  basicAuth,
+                'Access-Control-Allow-Origin': '*',
+                "Accept": "application/json",
+               "Content-type": "application/json"}}
+          )
+          .then(res => {
+              console.log(res);
+              alert("Success");
+                  
+          })
+          .catch(error => {
+            if (error.response) {
+              // Request made and server responded
+              console.log(error.response.data);
+              console.log(error.response.status);
+              console.log(error.response.headers);
+            } else if (error.request) {
+              // The request was made but no response was received
+              console.log(error.request);
+            } else {
+              // Something happened in setting up the request that triggered an Error
+              console.log('Error', error.message);
+            }
+            alert(error);
+          });
+
+          history.push("/");       
+        };
+
+
+
+
       
           const handleChange = (id, event) => {
             const newElements = { ...elements }
@@ -59,7 +139,10 @@ const MultiStageForm = () => {
             if (id === field_id) {
             switch (field_type) {
             case 'checkbox':
-            field['field_value'] = event.target.checked;
+              field['field_value'] = event.target.checked;
+              break;
+            case 'Multiselect' :
+              field['field_value']  = (Array.isArray(event)? event.map(f=>f.value) :[] );
             break;
             default:
             field['field_value'] = event.target.value;

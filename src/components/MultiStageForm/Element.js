@@ -39,11 +39,13 @@ const Element = ({ field: { field_type, field_id, field_label, field_placeholder
             );
         case 'Multiselect':
             return(
-            <MultiSelect field_id={field_id}
-            field_label={field_label}
-            field_type={field_type}
+            <MultiSelect 
+            field_id={field_id}
+            field_label={field_label}    
+            field_placeholder={field_placeholder}       
             field_options={field_options}
-            field_value={field_value}></MultiSelect>
+           
+            ></MultiSelect>
 
         );
         case 'checkbox':

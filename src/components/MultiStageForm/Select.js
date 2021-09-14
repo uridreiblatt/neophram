@@ -9,7 +9,7 @@ const Select = ({ field_id, field_label, field_options }) => {
                 handleChange(field_id, event)}>
                 <option>Default select</option>
                 {field_options.length > 0 && field_options.map(
-                    (option, i) => <option key={i} value={option.option_label}>{option.option_label} </option>)}
+                    (option, i) => <option key={option.value} value={option.label}>{option.label} </option>)}
             </select>
         </div>
     )
