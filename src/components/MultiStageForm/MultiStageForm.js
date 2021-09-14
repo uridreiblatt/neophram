@@ -138,11 +138,11 @@ const MultiStageForm = () => {
             const { field_type, field_id } = field
             if (id === field_id) {
             switch (field_type) {
-            case 'checkbox':
-              field['field_value'] = event.target.checked;
+            case 'checkbox':              
+              field['field_value'] = event.target.checked;             
               break;
             case 'Multiselect' :
-              field['field_value']  = (Array.isArray(event)? event.map(f=>f.value) :[] );
+              field['field_value']  = (Array.isArray(event)? event.map(f=>f.value).join(', ') :null );             
             break;
             default:
             field['field_value'] = event.target.value;
