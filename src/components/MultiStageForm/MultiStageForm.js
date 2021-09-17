@@ -4,11 +4,8 @@ import { FormContext } from './FormContext';
 import { useState, useEffect } from 'react';
 import formJSON from '../../Elements/data.json';
 import Element from './Element';
-import ConfirmForm from './ConfirmForm'
 import { AiFillFilePdf } from "react-icons/ai";
 import Pdf from '../../Pdf/Doc.pdf'
-import DataTable from '../MultiStageForm/DataTable'
-import Instructions from './Instructions';
 import axios from 'axios'
 
 
@@ -171,15 +168,17 @@ const MultiStageForm = () => {
         <FormContext.Provider value={{handleChange,handleSubmit}}>
     <div className="container">
       <form>
-        <h3 style={{color:"blue"}}> Barcode: {barcode}</h3>
-        <h3>{app_label } stage {stageFormStep} Presscription pdf: <a onClick={openPdf}>
+        <h3 style={{color:"blue"}}> Barcode: {barcode}  <a onClick={openPdf}>
+      <AiFillFilePdf className="ico" style={{backgroundColor:"black" , height:"40px", width:"40px"}} />
+   </a>          
+   </h3>
+        {/* <h3>{app_label } stage {stageFormStep} Presscription pdf: <a onClick={openPdf}>
       <AiFillFilePdf className="ico" style={{backgroundColor:"black" , height:"40px", width:"40px"}} />
    </a>          
             </h3>
-            <DataTable></DataTable>
+             */}
             <br></br>
-            {/* <Instructions></Instructions> */}
-
+   
                {
             pages ? pages.map((page,i)=> 
                         (stageFormStep === i ? 

@@ -1,56 +1,20 @@
 import React from 'react'
 
-export default function DataTable() {
-
-    const tableHeader =  [         
-         
-              {
-                Header: 'שם תרופה',
-                accessor: 'firstName',
-                value:[{text_display:"fff"}]
-              },
-              {
-                Header: 'כמות במ"ל',
-                accessor: 'lastName',
-                value:[{text_display:"ftttff"}]
-              },
-            
-              {
-                Header: 'סוג מומס נפח סופי',
-                accessor: 'age',
-                value:[{text_display:"eee"}]
-              },
-              {
-                Header: 'סוג אינפיוזר',
-                accessor: 'visits',
-                value:[{text_display:"1212"}]
-              },
-              
-            ]
 
 
-            const tableData =  [         
-         
-                {
-                   value:[{text_display:"ddd"},{text_display:"fff"},{text_display:"ggg"},{text_display:"hhh"}]
-                },
-                {
-                    value:[{text_display:"fff"},{text_display:"fff"},{text_display:"fff"},{text_display:"fff"}]
-                },
-              
-                {
-                    value:[{text_display:"fff"},{text_display:"fff"},{text_display:"fff"},{text_display:"fff"}]
-                }
-                
-              ]        
+const DataTable = ({ field_type,field_id,field_label, field_value,table_options }) => {
+
+
+     
     return (
-        <div>
- <table className="form-control" >
+      
+ <table className="form-control " style={{backgroundColor:"lightslategray"}} >
+   {/* <h3>{field_label}</h3> */}
       <thead>
       {
             <tr>
-              {tableHeader.map(cell => {
-                return <td >{cell.Header}</td>
+              {table_options.table_header.map(cell => {
+                return <td >{cell}</td>
               })}
             </tr>
          
@@ -58,17 +22,17 @@ export default function DataTable() {
       
       </thead>
       <tbody >
-      {tableData.map(row =>{
+      {table_options.table_row.map(row =>{
           return <tr>
-              {row.value.map(cell => {
-                return <td >{cell.text_display}</td>
+              {row.table_cell.map(cell => {
+                return <td >{cell}</td>
                 })}
           </tr>
       })}
       </tbody> 
     </table>
-            
-        </div>
+  
     )
 }
+export default DataTable 
 

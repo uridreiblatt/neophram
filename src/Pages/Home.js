@@ -1,5 +1,7 @@
 import React from 'react'
 import QrScnaner from '../components/Qr/QrScnaner'
+import Testqr from '../components/Qr/Testqr'
+    
     
 
 export default function Home() {
@@ -9,7 +11,8 @@ export default function Home() {
 
          
             <h1>Scan prescription Qr</h1>
-            <QrScnaner></QrScnaner>
+            {/* <QrScnaner></QrScnaner> */}
+            <Testqr></Testqr>
           
        
       </div>

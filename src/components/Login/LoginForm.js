@@ -121,16 +121,16 @@ const LoginForm = (props) => {
 
 
 
-            <div className="form-group" >
+            <div className="form-grouplogin" >
             <label>User name</label>
             <input type="text" className="form-control" placeholder="User name" onChange={e=> setUserName(e.target.value)} value={username} />
         </div>
-        <div className="form-group" onSubmit={handleSubmit}>
+        <div className="form-grouplogin" onSubmit={handleSubmit}>
             <label>Email address</label>
             <input type="email" className="form-control" placeholder="Enter email" onChange={e=> setUserEmail(e.target.value)} value={UserEmail} />
         </div>
 
-        <div className="form-group">
+        <div className="form-grouplogin">
             <label>Password</label>
             <input type="password" className="form-control" placeholder="Enter password" onChange={e => setPassword(e.target.value)} />
         </div>

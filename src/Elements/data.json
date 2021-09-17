@@ -1,295 +1,378 @@
 {
-    "errorMessage": "Success",
-    "errorInnerException": null,
-    "errorCode": 0,
-    "rootobjectReactForm": {
-      "app_label": "Perp Form",
-      "app_url": "Add pdf link",
-      "pages": [
-        {
-          "page_label": "Perp Page label 1",
-          "fields": [
-            {
-              "field_id": "PREPTASKNUM",
-              "field_label": "מספר תעודת הכנה",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "text",
-              "field_value": "PRP2100002",
-              "field_disable": true,
-              "field_options": []
-            },
-            {
-              "field_id": "SERIALNAME",
-              "field_label": "פק\"ע",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "text",
-              "field_value": "A-250855",
-              "field_disable": true,
-              "field_options": []
-            },
-            {
-              "field_id": "PARTNAME",
-              "field_label": "מק\"ט",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "text",
-              "field_value": "Z-0008",
-              "field_disable": true,
-              "field_options": []
-            },
-            {
-              "field_id": "PSDATE",
-              "field_label": "תאריך הכנה",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "text",
-              "field_value": "21/07/21",
-              "field_disable": true,
-              "field_options": []
-            },
-            {
-              "field_id": "CODE",
-              "field_label": "סוג בית מרקחת",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "text",
-              "field_value": "ANT",
-              "field_disable": true,
-              "field_options": []
-            },
-            {
-              "field_id": "MONITORING",
-              "field_label": "בדיקת צלחת ניטור",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "checkbox",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": []
-            },
-            {
-              "field_id": "NORMALLABEL",
-              "field_label": "פרטי מדבקה תקינים",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "checkbox",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": []
-            }
-          ]
-        },
-        {
-          "page_label": "Perp Page label 2",
-          "fields": [
-            {
-              "field_id": "STABILITY",
-              "field_label": "יציבות תקינה",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "checkbox",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": []
-            },
-            {
-              "field_id": "FLOWRATE",
-              "field_label": "קצב זרימה",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "checkbox",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": []
-            },
-            {
-              "field_id": "WORKSTATIONNAME",
-              "field_label": "מספר מנדף",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "select",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": [
+  "errorMessage": "Success",
+  "errorInnerException": null,
+  "errorCode": 0,
+  "rootobjectReactForm": {
+    "app_label": "טופס הכנה אנטיביוטיקה",
+    "app_url": "Add pdf link",
+    "pages": [
+      {
+        "page_label": "Stage  1",
+        "fields": [
+          {
+            "field_id": "PSDATE",
+            "field_label": "תאריך הכנה",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "text",
+            "field_value": "21/07/21",
+            "field_disable": true,
+            "field_options": [],
+            "table_options": null
+          },
+          {
+            "field_id": "tableHeader",
+            "field_label": "Na",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "table",
+            "field_value": null,
+            "field_disable": false,
+            "field_options": [],
+            "table_options": {
+              "table_header": [
+                "שם תרופה",
+                "כמות ב ml",
+                "סוג ממס נפח סופי ב ml",
+                "סוג האינפיוזר "
+              ],
+              "table_row": [
                 {
-                  "label": "a1",
-                  "value": 2
-                },
-                {
-                  "label": "a2",
-                  "value": 4
-                }
-              ]
-            },
-            {
-              "field_id": "WEIGHINGCONTROL",
-              "field_label": "בקרת שקילה",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "text",
-              "field_value": "0.0000",
-              "field_disable": false,
-              "field_options": []
-            },
-            {
-              "field_id": "UNITS",
-              "field_label": "מס יחידות תקינות",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "text",
-              "field_value": "0",
-              "field_disable": false,
-              "field_options": []
-            },
-            {
-              "field_id": "SIGN",
-              "field_label": "חתימת טכנאי",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "checkbox",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": []
-            },
-            {
-              "field_id": "SNAME2",
-              "field_label": "שם טכנאי",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "select",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": [
-                {
-                  "label": "אמיתי זילברצויג",
-                  "value": 2136
-                },
-                {
-                  "label": "יובל בר-לב TEST",
-                  "value": 2597
+                  "table_cell": [
+                    "CEFAMEZINE - ?",
+                    "0.15",
+                    "Sodium Chloride 0.9 %",
+                    "ניפרו 50 4.2"
+                  ]
                 }
               ]
             }
-          ]
-        },
-        {
-          "page_label": "Perp Page label 3",
-          "fields": [
-            {
-              "field_id": "STATDES",
-              "field_label": "סטאטוס",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "text",
-              "field_value": "לביצוע",
-              "field_disable": false,
-              "field_options": [
+          },
+          {
+            "field_id": "tableHeader",
+            "field_label": "Na",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "table",
+            "field_value": null,
+            "field_disable": false,
+            "field_options": [],
+            "table_options": {
+              "table_header": [
+                "שם החומר הפעיל",
+                "כמות",
+                "כמות ב ml"
+              ],
+              "table_row": [
                 {
-                  "label": "CLOSED",
-                  "value": 0
-                },
-                {
-                  "label": "ERROR",
-                  "value": 0
+                  "table_cell": [
+                    "CEFAZOLIN",
+                    "30.000",
+                    "0.15"
+                  ]
                 }
               ]
-            },
-            {
-              "field_id": "SNAME",
-              "field_label": "שם רוקח",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "select",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": [
-                {
-                  "label": "אור גלבוע",
-                  "value": 2583
-                }
-              ]
-            },
-            {
-              "field_id": "INITIAL",
-              "field_label": "התחלתי",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "checkbox",
-              "field_value": "Y",
-              "field_disable": true,
-              "field_options": []
-            },
-            {
-              "field_id": "RECEPTACLECODE",
-              "field_label": "RECEPTACLECODE",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "text",
-              "field_value": "10",
-              "field_disable": false,
-              "field_options": []
-            },
-            {
-              "field_id": "RECEPTACLEDES",
-              "field_label": "RECEPTACLEDES",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "text",
-              "field_value": "ניפרו 50 4.2",
-              "field_disable": false,
-              "field_options": []
-            },
-            {
-              "field_id": "PREPTASK",
-              "field_label": "PREPTASK",
-              "field_mandatory": "yes",
-              "field_placeholder": "Na",
-              "field_type": "text",
-              "field_value": "3",
-              "field_disable": false,
-              "field_options": []
-            },
-            {
-              "field_id": "equipment",
-              "field_label": "ציוד נלווה",
-              "field_mandatory": "yes",
-              "field_placeholder": "ציוד נלווה",
-              "field_type": "Multiselect",
-              "field_value": null,
-              "field_disable": false,
-              "field_options": [
-                {
-                  "label": "B-0001 - ALCOXIDINE 300 ML",
-                  "value": 61447
-                },
-                {
-                  "label": "Z-0008 - CEFAMEZINE",
-                  "value": 63950
-                },
-                {
-                  "label": "Z-0009 - VANCOMYCIN",
-                  "value": 63951
-                },
-                {
-                  "label": "Z-0027 - CYTOSAR",
-                  "value": 63965
-                }
-              ]
-            },
-            {
-              "field_id": "Instructions",
-              "field_label": "הנחיות",
-              "field_mandatory": "yes",
-              "field_placeholder": "הנחיות",
-              "field_type": "instructions",
-              "field_value": " שקית: בוצע ערבוב של השקית על פי הנדרש בנוהל HC-PP-036. בוצעה בדיקה ויזואלית לתוכן השקית שנמצא תקין לשימוש מבחינת צבע,משקעים, אוויר והומוגניות .            ·          אינפיוזר: בוצע Prime לאינפיוזר. בוצעה בדיקה ויזואלית לתוכן האינפיוזרשנמצא תקין לשימוש מבחינת צבע, משקעים, אוויר והומוגניות. בוצע מאזן כמות תרופה. ·          מזרק: בוצעה בדיקה ויזואלית לתוכן המזרק שנמצא תקין לשימוש מבחינת צבע,משקעים, אוויר והומוגניות.  בוצע מאזן כמות תרופה.",
-              "field_disable": true,
-              "field_options": []
             }
-          ]
-        }
-      ]
-    }
+          },
+          {
+            "field_id": "Instructions",
+            "field_label": "הנחיות",
+            "field_mandatory": "yes",
+            "field_placeholder": "הנחיות",
+            "field_type": "instructions",
+            "field_value": " שקית: בוצע ערבוב של השקית על פי הנדרש בנוהל HC-PP-036. בוצעה בדיקה ויזואלית לתוכן השקית שנמצא תקין לשימוש מבחינת צבע,משקעים, אוויר והומוגניות .            ·          אינפיוזר: בוצע Prime לאינפיוזר. בוצעה בדיקה ויזואלית לתוכן האינפיוזרשנמצא תקין לשימוש מבחינת צבע, משקעים, אוויר והומוגניות. בוצע מאזן כמות תרופה. ·          מזרק: בוצעה בדיקה ויזואלית לתוכן המזרק שנמצא תקין לשימוש מבחינת צבע,משקעים, אוויר והומוגניות.  בוצע מאזן כמות תרופה.",
+            "field_disable": true,
+            "field_options": [],
+            "table_options": null
+          },
+          {
+            "field_id": "PREPTASKNUM",
+            "field_label": "מספר תעודת הכנה",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "text",
+            "field_value": "PRP2100002",
+            "field_disable": true,
+            "field_options": [],
+            "table_options": null
+          },
+          {
+            "field_id": "SERIALNAME",
+            "field_label": "פק\"ע",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "text",
+            "field_value": "A-250855",
+            "field_disable": true,
+            "field_options": [],
+            "table_options": null
+          },
+          {
+            "field_id": "PARTNAME",
+            "field_label": "מק\"ט",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "text",
+            "field_value": "Z-0008",
+            "field_disable": true,
+            "field_options": [],
+            "table_options": null
+          }
+        ]
+      },
+      {
+        "page_label": "Perp Page label 2",
+        "fields": [
+          {
+            "field_id": "CODE",
+            "field_label": "סוג בית מרקחת",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "text",
+            "field_value": "ANT",
+            "field_disable": true,
+            "field_options": [],
+            "table_options": null
+          },
+          {
+            "field_id": "MONITORING",
+            "field_label": "בדיקת צלחת ניטור",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "checkbox",
+            "field_value": null,
+            "field_disable": false,
+            "field_options": [],
+            "table_options": null
+          },
+          {
+            "field_id": "NORMALLABEL",
+            "field_label": "פרטי מדבקה תקינים",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "checkbox",
+            "field_value": null,
+            "field_disable": false,
+            "field_options": [],
+            "table_options": null
+          },
+          {
+            "field_id": "STABILITY",
+            "field_label": "יציבות תקינה",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "checkbox",
+            "field_value": null,
+            "field_disable": false,
+            "field_options": [],
+            "table_options": null
+          },
+          {
+            "field_id": "FLOWRATE",
+            "field_label": "קצב זרימה",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "checkbox",
+            "field_value": null,
+            "field_disable": false,
+            "field_options": [],
+            "table_options": null
+          },
+          {
+            "field_id": "WORKSTATIONNAME",
+            "field_label": "מספר מנדף",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "select",
+            "field_value": null,
+            "field_disable": false,
+            "field_options": [
+              {
+                "label": "a1",
+                "value": 2
+              },
+              {
+                "label": "a2",
+                "value": 4
+              }
+            ],
+            "table_options": null
+          },
+          {
+            "field_id": "WEIGHINGCONTROL",
+            "field_label": "בקרת שקילה",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "text",
+            "field_value": "0.0000",
+            "field_disable": false,
+            "field_options": [],
+            "table_options": null
+          }
+        ]
+      },
+      {
+        "page_label": "Perp Page label 3",
+        "fields": [
+          {
+            "field_id": "UNITS",
+            "field_label": "מס יחידות תקינות",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "text",
+            "field_value": "0",
+            "field_disable": false,
+            "field_options": [],
+            "table_options": null
+          },
+          {
+            "field_id": "SIGN",
+            "field_label": "חתימת טכנאי",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "checkbox",
+            "field_value": null,
+            "field_disable": false,
+            "field_options": [],
+            "table_options": null
+          },
+          {
+            "field_id": "SNAME2",
+            "field_label": "שם טכנאי",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "select",
+            "field_value": null,
+            "field_disable": false,
+            "field_options": [
+              {
+                "label": "אמיתי זילברצויג",
+                "value": 2136
+              },
+              {
+                "label": "יובל בר-לב TEST",
+                "value": 2597
+              }
+            ],
+            "table_options": null
+          },
+          {
+            "field_id": "STATDES",
+            "field_label": "סטאטוס",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "text",
+            "field_value": "לביצוע",
+            "field_disable": false,
+            "field_options": [
+              {
+                "label": "CLOSED",
+                "value": 0
+              },
+              {
+                "label": "ERROR",
+                "value": 0
+              }
+            ],
+            "table_options": null
+          },
+          {
+            "field_id": "SNAME",
+            "field_label": "שם רוקח",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "select",
+            "field_value": null,
+            "field_disable": false,
+            "field_options": [
+              {
+                "label": "אור גלבוע",
+                "value": 2583
+              }
+            ],
+            "table_options": null
+          },
+          {
+            "field_id": "INITIAL",
+            "field_label": "התחלתי",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "checkbox",
+            "field_value": "Y",
+            "field_disable": true,
+            "field_options": [],
+            "table_options": null
+          },
+          {
+            "field_id": "equipment",
+            "field_label": "ציוד נלווה",
+            "field_mandatory": "yes",
+            "field_placeholder": "ציוד נלווה",
+            "field_type": "Multiselect",
+            "field_value": null,
+            "field_disable": false,
+            "field_options": [
+              {
+                "label": "B-0001 - ALCOXIDINE 300 ML",
+                "value": 61447
+              },
+              {
+                "label": "Z-0008 - CEFAMEZINE",
+                "value": 63950
+              },
+              {
+                "label": "Z-0009 - VANCOMYCIN",
+                "value": 63951
+              },
+              {
+                "label": "Z-0027 - CYTOSAR",
+                "value": 63965
+              }
+            ],
+            "table_options": null
+          },
+          {
+            "field_id": "tableFooter",
+            "field_label": "Na",
+            "field_mandatory": "yes",
+            "field_placeholder": "Na",
+            "field_type": "table",
+            "field_value": null,
+            "field_disable": false,
+            "field_options": [],
+            "table_options": {
+              "table_header": [
+                "",
+                "(ml) כמות",
+                "להשלים"
+              ],
+              "table_row": [
+                {
+                  "table_cell": [
+                    "מילוי ממס (מל)",
+                    "99.85",
+                    ""
+                  ]
+                },
+                {
+                  "table_cell": [
+                    "דילול (מל)",
+                    "10.000",
+                    ""
+                  ]
+                },
+                {
+                  "table_cell": [
+                    "מילוי חומר פעיל לכלי קיבול",
+                    "0.15",
+                    ""
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
   }
+}

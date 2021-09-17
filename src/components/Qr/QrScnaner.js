@@ -8,7 +8,7 @@ const QrScnaner = () => {
     width: 320
   };
   const [scanData, setscanData] = useState('R02020202');
-  const [scanIfnodelay, setscanIfnodelay] = useState(1000);
+  const [scanIfnodelay, setscanIfnodelay] = useState(500);
   const [scanIfnoresult, setscanIfnoresult] = useState('No result');
   const [scanIfnokeepScan, setscanIfnokeepScan] = useState(true);
          
@@ -17,9 +17,10 @@ const QrScnaner = () => {
       if (!scanIfnokeepScan) return;
       if (data !=null)
       {
-        console.log(data.text)
-        setscanIfnokeepScan(false);
+        console.log(data)
+        //setscanIfnokeepScan(false);
         setscanData( data.text);
+       
       }    
     else{
       setscanIfnoresult('Failed to scan qr code');
@@ -28,7 +29,7 @@ const QrScnaner = () => {
     
     }
     catch (err) {
-      console.log(data)
+      //console.log(err)
     }
   }
   const GotoForm= () =>

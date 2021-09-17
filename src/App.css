@@ -112,9 +112,17 @@
   }
   
 
+  .form-grouplogin{
+    font-size :smaller !important;
+    text-align: center;
+ 
+  }
+
   .form-group{
     font-size :smaller !important;
     text-align: center;
+    width: 650px;
+ 
   }
   .form-control{
     font-size :smaller !important;
@@ -129,7 +137,7 @@
     direction: rtl;
     border: 2px solid black;
     width: 100%;
-    background-color:rosybrown;
+    background-color:lightsteelblue;
     text-align: center;
   }
   td{
