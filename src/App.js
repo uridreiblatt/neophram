@@ -48,7 +48,6 @@ function App() {
         <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/Login' exact component={Login} />
-        <Route path='/MultiStageForm/:barcode' exact component={MultiStageForm} />      
         <Route path='/MultiStageForm/:barcode' exact component={MultiStageForm} />                              
         {/* <Route path='/customer/details/:id'  exact  component={UserDetails} />  
         <Route path='/customer/customerinfo/:id'  component={TabCustomres } />  */}

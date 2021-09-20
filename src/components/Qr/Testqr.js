@@ -3,6 +3,7 @@ import { useHistory,Link } from 'react-router-dom';
 import QrReader from 'react-qr-scanner'
 
 class Testqr extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
@@ -13,6 +14,7 @@ class Testqr extends Component {
 
     this.handleScan = this.handleScan.bind(this)
   }
+  
   handleScan(data) {
     try {
       if (!this.state.keepScan) return;
@@ -28,7 +30,7 @@ class Testqr extends Component {
     }
     else{
       this.setState({
-        result: 'Failed to scan qr code',
+        result: 'scan qr code',
       })
     }
     }
@@ -39,6 +41,7 @@ class Testqr extends Component {
   handleError(err) {
     console.error(err)
   }
+ 
   render() {
     const previewStyle = {
       height: 240,
@@ -54,7 +57,17 @@ class Testqr extends Component {
           onScan={this.handleScan}
         />
         <p>{this.state.result}</p>
-        <Link to={`/MultiStageForm/${this.state.result}`}  className="btn btn-primary">Goto Form</Link>
+        
+        
+       
+       
+        {this.state.keepScan ? null :
+        <Link to={`/MultiStageForm/${this.state.result}`} className="btn btn-primary" >Goto Form</Link>
+      }
+     
+        {/* <Link disable={true}  to={`/MultiStageForm/PRP2100002`}  > Goto Form</Link> */}
+       
+      
       </div>
     )
   }

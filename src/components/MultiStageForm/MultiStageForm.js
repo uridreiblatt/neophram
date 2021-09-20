@@ -13,7 +13,8 @@ import axios from 'axios'
 const api = axios.create({
   //baseURL: 'http://localhost/WebApiPg/api'
   //baseURL: 'http://localhost:61518/api'
-  baseURL: 'https://ngpapi.neopharmgroup.com/odata/Priority/tabula.ini/eld0999/'
+  //baseURL: 'https://ngpapi.neopharmgroup.com/odata/Priority/tabula.ini/eld0999/'
+  baseURL: 'https://localhost:44382/api/'
  })
  
 
@@ -80,9 +81,10 @@ const MultiStageForm = () => {
 
 
 
-        const handleSubmit = () =>
-        {                                    
-          console.clear();
+        const handleSubmit = (e) =>
+        {   
+
+          e.preventDefault();
           console.log(JSON.stringify(elements));                                
           var username = 'D002F8E1CEFA4567AB6032DF9EAA4D0D';
           var password = 'PAT';
@@ -103,6 +105,7 @@ const MultiStageForm = () => {
           .then(res => {
               console.log(res);
               alert("Success");
+              history.push("/");    
                   
           })
           .catch(error => {
@@ -121,7 +124,7 @@ const MultiStageForm = () => {
             alert(error);
           });
 
-          history.push("/");       
+            
         };
 
 
@@ -155,9 +158,61 @@ const MultiStageForm = () => {
         setElements(formJSON)
         
         },[])
-        const openPdf = ()=> {
-          window.open(Pdf);
+
+        const openPdf = (e)=> {
+
+          try{
+            e.preventDefault();
+          api.get("PrepPdf",
+            {method: "GET",
+              headers: {            
+                'Access-Control-Allow-Origin': '*',
+                "Accept": "application/pdf",
+                "Content-type": "application/json"},
+                responseType: 'blob'}
+          )
+          .then(response => {
+            const url = window.URL.createObjectURL(new Blob([response.data]));
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'file.pdf'); //or any other extension
+            document.body.appendChild(link);            
+            link.click();
+           
+
+            
+          }          
+          )
+         
+      
+          .catch(error => {
+            if (error.response) {
+              // Request made and server responded
+              console.log(error.response.data);
+              console.log(error.response.status);
+              console.log(error.response.headers);
+            } else if (error.request) {
+              // The request was made but no response was received
+              console.log(error.request);
+            } else {
+              // Something happened in setting up the request that triggered an Error
+              console.log('Error', error.message);
+            }
+            alert(" net :" + error);
+            history.push("/");    
+           
+          }
+          
+          )}
+        catch(er)
+        {
+          //history.push("/"); 
+          alert("gbl: " + er); 
+          history.push("/");      
+        
         }
+        }
+       
       
       
       
@@ -168,16 +223,14 @@ const MultiStageForm = () => {
         <FormContext.Provider value={{handleChange,handleSubmit}}>
     <div className="container">
       <form>
-        <h3 style={{color:"blue"}}> Barcode: {barcode}  <a onClick={openPdf}>
+        <h3 style={{color:"black"}}> Barcode: {barcode}   , Download prescription: <a onClick={openPdf}>
       <AiFillFilePdf className="ico" style={{backgroundColor:"black" , height:"40px", width:"40px"}} />
    </a>          
    </h3>
-        {/* <h3>{app_label } stage {stageFormStep} Presscription pdf: <a onClick={openPdf}>
-      <AiFillFilePdf className="ico" style={{backgroundColor:"black" , height:"40px", width:"40px"}} />
-   </a>          
-            </h3>
-             */}
-            <br></br>
+                  {/* <button onClick={openPdf}>
+          Download
+        </button> */}
+               <br></br>
    
                {
             pages ? pages.map((page,i)=> 
