@@ -163,6 +163,8 @@ const MultiStageForm = () => {
 
           try{
             e.preventDefault();
+            window.open(Pdf);
+            return;
           api.get("PrepPdf",
             {method: "GET",
               headers: {            
@@ -199,7 +201,7 @@ const MultiStageForm = () => {
               console.log('Error', error.message);
             }
             alert(" net :" + error);
-            history.push("/");    
+           
            
           }
           
@@ -208,7 +210,7 @@ const MultiStageForm = () => {
         {
           //history.push("/"); 
           alert("gbl: " + er); 
-          history.push("/");      
+         
         
         }
         }

@@ -112,6 +112,12 @@
   }
   
 
+  .qr-form
+  {
+    background-color: cadetblue;
+    padding: 1em;
+    border-radius: 0.5em;
+  }
   .form-grouplogin{
     font-size :smaller !important;
     text-align: center;

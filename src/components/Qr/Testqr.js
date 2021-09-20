@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { useHistory,Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import QrReader from 'react-qr-scanner'
 
 class Testqr extends Component {
@@ -49,7 +49,7 @@ class Testqr extends Component {
     }
 
     return (
-      <div>
+      <div className="qr-form">
         <QrReader
           delay={this.state.delay}
           style={previewStyle}
@@ -61,11 +61,11 @@ class Testqr extends Component {
         
        
        
-        {this.state.keepScan ? null :
+        {/* {this.state.keepScan ? null :
         <Link to={`/MultiStageForm/${this.state.result}`} className="btn btn-primary" >Goto Form</Link>
-      }
+      } */}
      
-        {/* <Link disable={true}  to={`/MultiStageForm/PRP2100002`}  > Goto Form</Link> */}
+        <Link disable={true}  to={`/MultiStageForm/PRP2100002`} className="btn btn-primary" > Goto Form</Link>
        
       
       </div>
