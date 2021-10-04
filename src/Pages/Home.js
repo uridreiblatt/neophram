@@ -1,6 +1,5 @@
 import React from 'react'
-import QrScnaner from '../components/Qr/QrScnaner'
-import Testqr from '../components/Qr/Testqr'
+import BrScnaner from '../components/Qr/BarcodeScanner'
     
     
 
@@ -10,9 +9,9 @@ export default function Home() {
 
 
          
-            <h1>Scan prescription Qr</h1>
+            <h1>Scan prescription Barcode</h1>
             {/* <QrScnaner></QrScnaner> */}
-            <Testqr></Testqr>
+            <BrScnaner></BrScnaner>
           
        
       </div>

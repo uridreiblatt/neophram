@@ -1,45 +1,47 @@
 import React  , {useState}from 'react'
 import './LoginForm.css'
-import axios from 'axios'
-import formJSONpharmacist from '../../Elements/pharmacist.json';
+import api from '../../Api/api'
 
 
 
-//const apiUrl = 'http://localhost:3001';
-const apiUrl = 'https://localhost:44339/Api';
 
-
-// const api = axios.create({
-//     //baseURL: 'http://localhost/WebApiPg/api'
-//     //baseURL: 'http://localhost:61518/api'
-//     baseURL: 'https://localhost:44339/Api'
-//    })
-axios.interceptors.request.use(
-  config => {
-    const { origin } = new URL(config.url);
-    const allowedOrigins = [apiUrl];
-    const token = localStorage.getItem('token');
-    if (allowedOrigins.includes(origin)) {
-      config.headers.authorization = `Bearer ${token}`;
-    }
-    return config;
-  },
-  error => {
-    return Promise.reject(error);
-  }
-);
 
 async function loginUser(credentials) {
-  return fetch('http://localhost:8080/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(credentials)
-  })
-    .then(data => data.json())
- }
- console.log('formJSONpharmacist',formJSONpharmacist)
+  // return fetch('http://localhost:8080/login', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify(credentials)
+  // })
+  //   .then(data => data.json())
+  api.post("/login",credentials,
+  {method: "POST",
+    headers: {       
+      'Access-Control-Allow-Origin': '*',
+      "Accept": "application/json",
+     "Content-type": "application/json"}}
+)
+.then(res => {
+    console.log(res);
+        
+})
+.catch(error => {
+  if (error.response) {
+    // Request made and server responded
+    console.log(error.response.data);
+    console.log(error.response.status);
+    console.log(error.response.headers);
+  } else if (error.request) {
+    // The request was made but no response was received
+    console.log(error.request);
+  } else {
+    // Something happened in setting up the request that triggered an Error
+    console.log('Error', error.message);
+  }
+  alert(error);
+});
+ } 
 const LoginForm = (props) => {
     //const {handleChanges,values,handleSubmit, errors, NetError} = useForm(validate);
     //const storedJwt = localStorage.getItem('token');
@@ -53,17 +55,12 @@ const LoginForm = (props) => {
     
     const handleSubmit = async e => {
       e.preventDefault();    
-      var pharmacist=  formJSONpharmacist.filter(item => item.pharmacistName === username  )
-      if (pharmacist != null){
-        props.fsetislogedin(pharmacist);
-    }
-    
-
-      // const token = await loginUser({
+          // const token = await loginUser({
       //   username,
       //   password
       // });
       // props.setToken(true);
+      props.fsetislogedin(true);
       // localStorage.setItem('token', token);
       // setError("Login Success");
     }
@@ -71,50 +68,7 @@ const LoginForm = (props) => {
 
 
     return (
-        // <div >
-        //      <form className='login-form' onSubmit={handleSubmit}>
-        //      <a className="logo"> Elogy <span className="span-green"> Avi innovation</span><img src={logo} 
-        //      className="App-logo" alt="logo" /></a>
-             
-        //         <h3>Login</h3>
-             
-               
-        //                 <label >
-        //                     User name  <input type='text' 
-        //                         name='username' 
-        //                         id='username' 
-                                
-        //                         placeholder='user name' 
-        //                         value={username} 
-        //                         onChange={e => setUserName(e.target.value)} />   
-        //                 </label>
-                       
-        //                 <label  htmlFor='password'>
-        //                 password  <input type='password' name='password' id='password' 
-        //                 placeholder='password' value={password} onChange={e => setPassword(e.target.value)} />
-             
-        //                 </label>
-                        
-                     
-        //                 {/* <label className='form-label' htmlFor='email'>
-        //                     Email   <input type='email' name='email' id='email' className='form-input' placeholder='email' value={values.email} onChange={handleChanges}/>
-        //                 </label> */}
-                      
-            
-                 
-             
-        //        <button type="submit" className='form-input-btn'>
-        //            Login
-        //        </button>
-        //        {/* <span className='form-input-login'>
-        //             Allredy have an acount Login <a href="#">here</a>
-        //        </span> */}
-        //        <span className='span-errors'>
-        //        { <span className="span-errors">{error}</span>} 
-        //        </span>
-             
-        //      </form>
-        // </div>
+
 
         <form className="login-form" onSubmit={handleSubmit}>
             <h3>Sign In</h3>

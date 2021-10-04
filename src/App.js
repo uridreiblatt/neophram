@@ -21,7 +21,7 @@ function App() {
   {
     if (e!=null)
     {
-      setUserName ( e[0].pharmacistName);
+      setUserName ( "Uri");
       setislogedIn  (true);
     }
     else{

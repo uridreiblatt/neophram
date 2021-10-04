@@ -6,50 +6,16 @@ import formJSON from '../../Elements/data.json';
 import Element from './Element';
 import { AiFillFilePdf } from "react-icons/ai";
 import Pdf from '../../Pdf/Doc.pdf'
-import axios from 'axios'
+import api from '../../Api/api'
 
 
-
-const api = axios.create({
-  //baseURL: 'http://localhost/WebApiPg/api'
-  //baseURL: 'http://localhost:61518/api'
-  //baseURL: 'https://ngpapi.neopharmgroup.com/odata/Priority/tabula.ini/eld0999/'
-  baseURL: 'https://localhost:44382/api/'
- })
  
 
 //import {Pdf} from 'Doc.pdf'; ,
 console.log('formJSON',formJSON)
 const MultiStageForm = () => {
 
-      //   var Submit_data = {
-      //     "MONITORING": 'Y',
-      //     "NORMALLABEL": 'Y',
-      //     "STABILITY": 'Y',
-      //     "FLOWRATE": 'Y',
-      //     "WORKSTATIONNAME": "a1",
-      //     "WORKSTATIONDES": "test1",
-      //     "WEIGHINGCONTROL": 0.0000,
-      //     "UNITS": 0,
-      //     "SIGN": 'Y',
-      //     "USERID2": 2597,
-      //     "SNAME2": 'יובל בר-לב TEST',
-      //     "USERID": 2583,
-      //     "SNAME": 'אור גלבוע',
-      //     "INITIAL": "Y",
-      //     "NEO_PREPADDEQUIP_SUBFORM": [
-      //         {
-      //             "PARTNAME": "Z-0008"
-      //         },
-      //         {
-      //             "PARTNAME": "Z-0009"
-      //         },
-      //         {
-      //             "PARTNAME": "Z-0027"
-      //         }
-      //     ]
-      // }
-  
+     
         let { barcode } = useParams();
         console.log(barcode);
         const history = useHistory();
@@ -86,44 +52,45 @@ const MultiStageForm = () => {
 
           e.preventDefault();
           console.log(JSON.stringify(elements));                                
-          var username = 'D002F8E1CEFA4567AB6032DF9EAA4D0D';
-          var password = 'PAT';
-          var credentials = btoa(username + ':' + password);
-          var basicAuth = 'Basic ' + credentials;
+          // var username = 'D002F8E1CEFA4567AB6032DF9EAA4D0D';
+          // var password = 'PAT';
+          // var credentials = btoa(username + ':' + password);
+          // var basicAuth = 'Basic ' + credentials;
          
           
            
              
-            api.patch("NEO_PREPTASK('PRP2100002')?$expand=NEO_PRESCRIPTION_LBL_SUBFORM",elements,
-            {method: "PATCH",
-              headers: {
-                 'Authorization':  basicAuth,
-                'Access-Control-Allow-Origin': '*',
-                "Accept": "application/json",
-               "Content-type": "application/json"}}
-          )
-          .then(res => {
-              console.log(res);
-              alert("Success");
-              history.push("/");    
+          //   api.patch("NEO_PREPTASK('PRP2100002')?$expand=NEO_PRESCRIPTION_LBL_SUBFORM",elements,
+          //   {method: "PATCH",
+          //     headers: {
+          //        'Authorization':  basicAuth,
+          //       'Access-Control-Allow-Origin': '*',
+          //       "Accept": "application/json",
+          //      "Content-type": "application/json"}}
+          // )
+          // .then(res => {
+          //     console.log(res);
+          //     alert("Success");
+          //     history.push("/");    
                   
-          })
-          .catch(error => {
-            if (error.response) {
-              // Request made and server responded
-              console.log(error.response.data);
-              console.log(error.response.status);
-              console.log(error.response.headers);
-            } else if (error.request) {
-              // The request was made but no response was received
-              console.log(error.request);
-            } else {
-              // Something happened in setting up the request that triggered an Error
-              console.log('Error', error.message);
-            }
-            alert(error);
-          });
-
+          // })
+          // .catch(error => {
+          //   if (error.response) {
+          //     // Request made and server responded
+          //     console.log(error.response.data);
+          //     console.log(error.response.status);
+          //     console.log(error.response.headers);
+          //   } else if (error.request) {
+          //     // The request was made but no response was received
+          //     console.log(error.request);
+          //   } else {
+          //     // Something happened in setting up the request that triggered an Error
+          //     console.log('Error', error.message);
+          //   }
+          //   alert(error);
+            
+          // });
+          history.push("/");   
             
         };
 

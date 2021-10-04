@@ -1,30 +1,10 @@
 import {useState} from 'react'
-import axios from 'axios'
-
-//const apiUrl = 'http://localhost:3001';
-const apiUrl = 'https://localhost:44339/Api';
+import api from '../../Api/api'
 
 
-const api = axios.create({
-    //baseURL: 'http://localhost/WebApiPg/api'
-    //baseURL: 'http://localhost:61518/api'
-    //baseURL: 'https://localhost:44339/Api'
-    baseURL: apiUrl
-   })
-axios.interceptors.request.use(
-  config => {
-    const { origin } = new URL(config.url);
-    const allowedOrigins = [apiUrl];
-    const token = localStorage.getItem('token');
-    if (allowedOrigins.includes(origin)) {
-      config.headers.authorization = `Bearer ${token}`;
-    }
-    return config;
-  },
-  error => {
-    return Promise.reject(error);
-  }
-);
+
+
+
 
 const useForm = (validate) =>{
     const [values, setValues] = useState({

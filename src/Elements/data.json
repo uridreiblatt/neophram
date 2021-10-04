@@ -95,7 +95,13 @@
             "field_disable": true,
             "field_options": [],
             "table_options": null
-          },
+          }
+        ]
+      },
+      {
+        "page_label": "Perp Page label 2",
+        "fields": [
+          
           {
             "field_id": "SERIALNAME",
             "field_label": "פק\"ע",
@@ -117,12 +123,7 @@
             "field_disable": true,
             "field_options": [],
             "table_options": null
-          }
-        ]
-      },
-      {
-        "page_label": "Perp Page label 2",
-        "fields": [
+          },
           {
             "field_id": "CODE",
             "field_label": "סוג בית מרקחת",
