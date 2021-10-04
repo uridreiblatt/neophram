@@ -51,7 +51,37 @@ const MultiStageForm = () => {
         {   
 
           e.preventDefault();
-          console.log(JSON.stringify(elements));                                
+          console.log(JSON.stringify(elements));     
+          let jsn = JSON.stringify(elements);
+          api.post("/CleanRoom",jsn,
+          {method: "POST",
+            headers: {       
+              'Access-Control-Allow-Origin': '*',
+              "Accept": "application/json",
+              "Content-type": "application/json"}}
+        )
+        .then(res => {
+            console.log(res);
+            alert (JSON.stringify(res));
+                
+        })
+        .catch(error => {
+          if (error.response) {
+            // Request made and server responded
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+          } else if (error.request) {
+            // The request was made but no response was received
+            console.log(error.request);
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log('Error', error.message);
+          }
+          alert(error);
+        });
+
+
           // var username = 'D002F8E1CEFA4567AB6032DF9EAA4D0D';
           // var password = 'PAT';
           // var credentials = btoa(username + ':' + password);
