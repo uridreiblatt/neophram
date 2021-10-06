@@ -5,7 +5,7 @@ const Checkbox = ({ field_id,
     field_value }) => {
     const { handleChange } = useContext(FormContext);
     return (
-        <div className="form-check">
+        <div className="form-group">
             <input type="checkbox" style={{color:"black"}} className="form-check-input" id="exampleCheck1" checked={field_value} 
             onChange={(event) => handleChange(field_id, event)} />
             <label className="form-check-label" htmlFor="exampleCheck1">{field_label}</label>

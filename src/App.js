@@ -1,5 +1,8 @@
 
+
+
 import React  from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import { Switch , Route ,useHistory } from 'react-router-dom';
 import MultiStageForm from './components/MultiStageForm/MultiStageForm';

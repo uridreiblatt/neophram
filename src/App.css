@@ -3,6 +3,7 @@
 }
 
 .container{
+   direction: rtl;
   margin-top:  10px !important;
   font-weight: 300 !important;
   align-items: center;
@@ -129,8 +130,7 @@
 
   .form-group{
     font-size :smaller !important;
-    text-align: center;
-    width: 650px;
+   
  
   }
   .form-control{
@@ -138,8 +138,9 @@
   }
   .form-check-label
   {
-    font-size :smaller !important;
+    
     color: black;
+    margin-right: 1em;
   }
 
   table, th, td , tr{

@@ -222,13 +222,11 @@ const MultiStageForm = () => {
         <FormContext.Provider value={{handleChange,handleSubmit}}>
     <div className="container">
       <form>
-        <h3 style={{color:"black"}}> Barcode: {barcode}   , Download prescription: <a onClick={openPdf}>
-      <AiFillFilePdf className="ico" style={{backgroundColor:"black" , height:"40px", width:"40px"}} />
+        <h3 style={{color:"black"}}> Barcode: {barcode}   <a onClick={openPdf}>
+       <AiFillFilePdf className="ico" style={{backgroundColor:"black" , height:"30px", width:"30px"}} />
    </a>          
    </h3>
-                  {/* <button onClick={openPdf}>
-          Download
-        </button> */}
+               
                <br></br>
    
                {
