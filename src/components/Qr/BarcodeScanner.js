@@ -7,19 +7,20 @@ class BarcodeScanner extends Component {
     super(props)
     this.state = {
       result: 'No result from scanner',
-      err:''
+      err:'',
+      keepScan:true
     }
  
     this.handleScan = this.handleScan.bind(this)
   }
   
   handleScan(data){
-    if (this.state.result!=='PRP2100002')
-    {
+    
     this.setState({
       result: data,
+      keepScan:false,
     })
-    }
+    
   }
   handleError(err){
     
@@ -32,7 +33,7 @@ class BarcodeScanner extends Component {
         <BarcodeReader
           onError={this.handleError}
           onScan={this.handleScan}
-          testCode={'PRP2100002'}
+         
           />
         <p>{this.state.result}</p>
         <Link disable={true}  to={`/MultiStageForm/PRP2100002`} className="btn btn-primary" > Goto Form</Link>
