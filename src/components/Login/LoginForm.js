@@ -2,30 +2,29 @@ import React  , {useState}from 'react'
 import './LoginForm.css'
 import api from '../../Api/api'
 //import Button from 'react-bootstrap/Button'
-// import 'bootstrap/dist/css/bootstrap.min.css';
+// 
 
 
 
 
 
 async function loginUser(credentials) {
-  // return fetch('http://localhost:8080/login', {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json'
-  //   },
-  //   body: JSON.stringify(credentials)
-  // })
-  //   .then(data => data.json())
-  api.post("/login",credentials,
-  {method: "POST",
+  //api.get("http://localhost:13438/api/Customer",
+   api.post("/Authenticate/login",JSON.stringify(credentials),
+  // {method: "GET",
+  //   headers: {       
+  //     'Access-Control-Allow-Origin': '*',
+  //     "Accept": "application/json",
+  //    "Content-type": "application/json"}}
+   {method: "POST",
     headers: {       
       'Access-Control-Allow-Origin': '*',
       "Accept": "application/json",
      "Content-type": "application/json"}}
 )
 .then(res => {
-    console.log(res);
+    alert(JSON.stringify(res));
+    //localStorage.setItem('token', token);
         
 })
 .catch(error => {
@@ -41,7 +40,7 @@ async function loginUser(credentials) {
     // Something happened in setting up the request that triggered an Error
     console.log('Error', error.message);
   }
-  alert(error);
+  alert(JSON.stringify(error));
 });
  } 
 const LoginForm = (props) => {
@@ -57,13 +56,13 @@ const LoginForm = (props) => {
     
     const handleSubmit = async e => {
       e.preventDefault();    
-          // const token = await loginUser({
-      //   username,
-      //   password
-      // });
-      // props.setToken(true);
+      const token = await loginUser({
+        username,
+        password
+      });
+      //props.setToken(true);
       props.fsetislogedin(true);
-      // localStorage.setItem('token', token);
+      
       // setError("Login Success");
     }
   
